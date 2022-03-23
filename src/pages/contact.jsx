@@ -9,7 +9,6 @@ const ContactUs = ({data, location}) => {
   const content = JSON.parse(story.content)
   const { seoData, mainData } = ContactUsData(),
     { title, description } = seoData
-    console.log(content)
 
   return (
     <>

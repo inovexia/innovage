@@ -21,7 +21,7 @@ const IndexPage = ({ data, location }) => {
       <Seo title={title} description={description} schemaMarkup={schema} />
       {content.body.map(({ component, ...rest }, i) =>
         (component => {
-          console.log(component, rest)
+          false && console.log(component, rest)
           switch (component) {
             case "Banner":
               return (

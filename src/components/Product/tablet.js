@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Breadcrumb from './breadcrumb'
 import ProductFormTablet from './product-form-tablet'
 import KeyIngredients from './key-ingredients'
 import Reviews from './reviews'
+// import SeenOnInstagram from './seen-on-instagram'
 
 export const Tablet = ({
   imagesData,
@@ -17,12 +17,6 @@ export const Tablet = ({
 }) => {
   return (
     <div className={'product-content'}>
-      <div className={'info'}>
-        <Breadcrumb
-          title={primaryCollection.node.title}
-          link={`/collections/${primaryCollection.node.handle}/`}
-        />
-      </div>
       <ProductFormTablet imagesData={imagesData} product={product} />
       <KeyIngredients product={product} />
       <Reviews product={product} setProductRating={setProductRating} />

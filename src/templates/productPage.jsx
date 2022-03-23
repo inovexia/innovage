@@ -28,7 +28,7 @@ const ProductPage = ({
       name: product.title,
       description: product.description,
       image: ogImage,
-      sku: product.variants.edges[0].node.sku,
+      sku: product.variants?.edges[0]?.node.sku ?? '',
       brand: {
         '@type': 'Brand',
         name: product.vendor,

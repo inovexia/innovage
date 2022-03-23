@@ -1,7 +1,6 @@
 import React from 'react'
 
 import onSale from '~/components/functions/on-sale'
-import Breadcrumb from './breadcrumb'
 import Gallery from './gallery'
 import ProductForm from './product-form'
 import KeyIngredients from './key-ingredients'
@@ -32,15 +31,9 @@ const Desktop = ({
       </div>
       <div className={'flex-shrink-1'}>
         <div className={'info'}>
-          <Breadcrumb
-            title={primaryCollection.node.title}
-            link={`/collections/${primaryCollection.node.handle}/`}
-          />
           <ProductForm product={product} />
           <KeyIngredients product={product} />
           <Reviews product={product} setProductRating={setProductRating} />
-          {/* {process.env.NODE_ENV === 'development' && <SeenOnInstagram />} */}
-          
         </div>
       </div>
     </div>
