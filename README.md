@@ -1,9 +1,9 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-    <img alt="DemoSoap" src="static/logo.png" width="250" />
+    <img alt="Storyblok Gatsby Shopify Theme" src="static/logo.png" width="250" />
 </p>
 <h1 align="center">
-  DemoSoap 2.0.0
+  Storyblok Gatsby Shopify Theme
 </h1>
 
 ## 🔥 Features
