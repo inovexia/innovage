@@ -45,7 +45,7 @@ export default IndexPage
 
 export const query = graphql`
   query HomeQuery {
-    storyblokEntry(full_slug: { eq: "home" }) {
+    story: storyblokEntry(full_slug: { eq: "home" }) {
       content
     }
     storeAdmin {
@@ -84,4 +84,5 @@ export const query = graphql`
       }
     }
   }
+ 
 `
