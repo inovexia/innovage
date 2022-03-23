@@ -3,7 +3,7 @@ import ReactHtmlParser from 'html-react-parser'
 
 const ShopifyPageContent = ({ title, body }) => {
   return (
-    <section className={'shopify-page'}>
+    <section className={'shopify-page pb-5'}>
       <div className={'container-fluid'}>
         <div className={'page-data'}>
           <div className={'page-title'}>

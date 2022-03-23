@@ -14,16 +14,16 @@ const ShopifyPageData = () => {
 
   return {
     seoData: {
-      title: `Mattressville Page`,
-      description: `Mattressville provides the best all-around mattress at great discounts. Buy online from our wide selection of mattresses for sale &amp; enjoy free delivery. Call us!`,
+      title: `Theme Page`,
+      description: `Storyblok is headless CMS. Know more about this Call us!`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
         name: 'Product Category',
         image: ogImage,
         '@id': '',
-        url: 'https://mattressville.netlify.app',
-        telephone: '888-841-0905',
+        url: 'https://storyblok-gatsby.netlify.app',
+        telephone: '1234567890',
         priceRange: '$',
         address: {
           '@type': 'PostalAddress',
@@ -52,9 +52,9 @@ const ShopifyPageData = () => {
           closes: '18:00',
         },
         sameAs: [
-          'https://www.facebook.com/matraville',
-          'https://twitter.com/mattressville1',
-          'https://www.instagram.com/mattress_ville',
+          'https://www.facebook.com/storyblok',
+          'https://twitter.com/storyblok',
+          'https://www.instagram.com/storyblok',
         ],
       },
     },

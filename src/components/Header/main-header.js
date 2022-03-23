@@ -108,7 +108,7 @@ const MainHeader = ({
   return (
     <>
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <Container>
+  <div className={`container-fluid`}>
   <Link to={'/'} className={`logo`}>
     <img
       loading={'lazy'}
@@ -191,7 +191,7 @@ const MainHeader = ({
               </div>
     </Nav>
   </Navbar.Collapse>
-  </Container>
+  </div>
 </Navbar>
       {showSearch && (
         <div

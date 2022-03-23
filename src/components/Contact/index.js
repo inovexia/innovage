@@ -1,116 +1,190 @@
 import React, { useState } from 'react'
 import ReactHtmlParser from 'html-react-parser'
 import emailjs from 'emailjs-com'
+import ReCAPTCHA from 'react-google-recaptcha'
 
-const Contact = ({ data: { pageTitle, address, getInTouch } }) => {
-  const [isSubmitting, updateSubmitting] = useState(false),
+import GSIcon from '~/components/gs-icon'
+
+const Contact = ({ data }) => {
+  const subject = `New contact request from Contact Us form`,
+    [isSubmitting, updateSubmitting] = useState(false),
+    [isVerified, setVerified] = useState(false),
     [responseColor, setResponseColor] = useState(''),
     [message, setMessage] = useState(null),
-    submitContactForm = e => {
-      e.preventDefault()
-      updateSubmitting(true)
-      emailjs
-        .sendForm(
-          'service_12qhrr7',
-          'template_d6n4w7q',
-          e.target,
-          'user_BV0axK6Y16BtLdONYEbaa'
-        )
-        .then(
-          result => {
-            if (result.text.toLowerCase() === 'ok') {
-              setResponseColor('success')
-              setMessage(<p>{'Email sent successfully.'}</p>)
-              e.target.reset()
-              //resetReCaptcha()
-              updateSubmitting(false)
-            }
-          },
-          error => {
-            console.log(error.text)
+    [reCaptchaInstance, setReCaptchaInstance] = useState(null),
+    reCaptchaReference = event => {
+      setReCaptchaInstance(event)
+    },
+    resetReCaptcha = () => {
+      setVerified(false)
+      reCaptchaInstance.reset()
+    },
+    verifyCaptcha = value => {
+      if (value && value.length > 0) {
+        setResponseColor('')
+        setMessage(null)
+        setVerified(true)
+      }
+    },
+    expiredCaptcha = () => {
+      setResponseColor('warning')
+      setMessage(
+        <p>
+          <strong>Verification Expired!&nbsp;</strong>Check the Checkbox Again.
+        </p>
+      )
+      setVerified(false)
+    },
+    submitContactForm = async event => {
+      event.preventDefault()
+      if (isVerified) {
+        try {
+          const formData = new FormData(event.target)
+          formData.delete('g-recaptcha-response')
+          const formBody = new URLSearchParams(formData).toString()
+          updateSubmitting(true)
+          const submittedForm = await fetch('./', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: formBody,
+          })
+          if (submittedForm.ok) {
+            setResponseColor('success')
+            setMessage(<p>{'Email sent successfully.'}</p>)
           }
+        } catch (error) {
+          console.log(error.message)
+        } finally {
+          event.target.reset()
+          resetReCaptcha()
+          updateSubmitting(false)
+        }
+      } else {
+        setResponseColor('warning')
+        setMessage(
+          <p>
+            <strong>Verify!</strong> If you are not a bot.
+          </p>
         )
+      }
     }
 
   return (
-    <section className={'contact-us'}>
-      <div className={'page-title'}>
-        <h1>{pageTitle}</h1>
+    <section className={'contact-us pb-5'}>
+      <div className={'container-fluid'}>
+        <div className={'page-title'}>
+          <h1>{data.title}</h1>
+        </div>
       </div>
       <div className={'container-fluid'}>
         <div className={'d-block d-lg-flex flex-row'}>
-          <div className={'form-outer'}>
-            <div className={'contact-form'}>
-              <form onSubmit={submitContactForm}>
-                <div className={'d-block d-lg-flex double-col'}>
-                  <div className={'form-group'}>
-                    <input
-                      type={'text'}
-                      id={'fname'}
-                      name={'fname'}
-                      size={'40'}
-                      className={'form-control'}
-                      required={true}
-                      placeholder={'YOUR NAME'}
-                    />
-                  </div>
-                  <div className={'form-group email-box'}>
-                    <input
-                      type={'email'}
-                      name={'email'}
-                      id={'email'}
-                      size={'40'}
-                      className={'form-control'}
-                      required={true}
-                      placeholder={'YOUR EMAIL ADDRESS'}
-                    />
-                  </div>
-                </div>
-                <div className={'single-col'}>
-                  <div className={'form-group'}>
-                    <textarea
-                      name={'message'}
-                      id={'message'}
-                      className={'form-control'}
-                      required={false}
-                      rows={'4'}
-                      placeholder={'YOUR MESSAGE'}
-                    />
-                  </div>
-                </div>
-                {message && (
-                  <div
-                    className={`alert alert-${responseColor} submit-response`}
-                  >
-                    {message}
-                  </div>
-                )}
-                <div className={'form-submit'}>
-                  <input
-                    type={'submit'}
-                    value={'SUBMIT'}
-                    className={'btn-submit btn btn-demo-primary'}
-                    disabled={isSubmitting}
-                  />
-                </div>
-              </form>
-            </div>
-          </div>
-          <div className={'address-outer'}>
+        <div className={'address-outer'}>
             <div className={'address-box'}>
-              <h5>{address.addressTitle}</h5>
-              <p>{ReactHtmlParser(address.addressDetails)}</p>
+              <h5>ADDRESS</h5>
+              <p>
+              {data.address_line1 ? <strong>{data.address_line1}</strong> : 
+               ''
+              }
+              {data.address_line2 && data.address_line2 ? <span class="d-block">{data.address_line2}</span> : 
+               ''
+              } 
+              </p>
             </div>
             <div className={'contact-by'}>
-              <h5>{getInTouch.getInTouchTitle}</h5>
+              <h5>GET IN TOUCH</h5>
               <strong>
-                <a href={`mailto:${getInTouch.email}`}>{getInTouch.email}</a>
+                {data.contact_email ? <a href={`mailto:${data.contact_email}`}>{data.contact_email}</a> : '' } 
               </strong>
               <p>
-                <a href={`tel:${getInTouch.phone}`}>{getInTouch.phone}</a>
+                {data.contact_number ? <a href={`tel:${data.contact_number}`}>{data.contact_number}</a> : '' }
               </p>
-              <span>{getInTouch.openingHours}</span>
+             {data.office_time && data.office_time ? <span>{data.office_time}</span> : ''}
             </div>
+          </div>
+          <div className={'form-outer'}>
+          <div className={'contact-form'}>
+        <form
+          data-netlify={'true'}
+          name={'contact-us'}
+          method={'post'}
+          onSubmit={submitContactForm}
+        >
+          <input type={'hidden'} name={'form-name'} value={'contact-us'} />
+          <input type={'hidden'} name={'subject'} value={subject} />
+          <div className={'form-group'}>
+            <label className={'control-label'} htmlFor={'fname'}>
+              Name*
+            </label>
+            <input
+              type={'text'}
+              id={'fname'}
+              name={'fname'}
+              size={'40'}
+              className={'form-control'}
+              required={true}
+            />
+          </div>
+          <div className={'form-group'}>
+            <label className={'control-label'} htmlFor={'email'}>
+              Email*
+            </label>
+            <input
+              type={'email'}
+              name={'email'}
+              id={'email'}
+              size={'40'}
+              className={'form-control'}
+              required={true}
+            />
+          </div>
+          <div className={'form-group'}>
+            <label className={'control-label'} htmlFor={'phone'}>
+              Phone
+            </label>
+            <input
+              type={'text'}
+              name={'phone'}
+              id={'phone'}
+              size={'40'}
+              className={'form-control'}
+            />
+          </div>
+          <div className={'form-group'}>
+            <label htmlFor={'message'} className={'control-label'}>
+              Your message*
+            </label>
+            <textarea
+              name={'message'}
+              id={'message'}
+              cols={'40'}
+              rows={'7'}
+              className={'form-control'}
+              required={true}
+            />
+          </div>
+          <div className={'form-group'}>
+            <ReCAPTCHA
+              sitekey={'6LdqB4UbAAAAAOUb6IUrB99qCUvDJGH38JtqUgBC'}
+              ref={e => reCaptchaReference(e)}
+              onChange={verifyCaptcha}
+              onExpired={expiredCaptcha}
+            />
+          </div>
+          {message && (
+            <div className={`alert alert-${responseColor} submit-response`}>
+              {message}
+            </div>
+          )}
+          <div className={'form-submit'}>
+            <input
+              type={'submit'}
+              value={'Send Message'}
+              className={'btn-submit'}
+              disabled={isSubmitting}
+            />
+          </div>
+        </form>
+      </div>
           </div>
         </div>
       </div>

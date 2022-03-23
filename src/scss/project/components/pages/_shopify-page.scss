@@ -2,19 +2,15 @@
   .shopify-page {
     .container-fluid {
       .page-data {
-        width: 100%;
-        max-width: 834px;
-        margin: 0 auto;
-
         .page-title {
           padding: 40px 0 20px;
           h1 {
             font-family: arial;
             font-weight: 700;
-            font-size: 36px;
+            font-size: 26px;
             line-height: 45px;
             color: #1e1e1e;
-            text-align: center;
+            text-align: left;
             margin-bottom: 0;
           }
         }
@@ -57,8 +53,8 @@
         .page-title {
           padding: 50px 0;
           h1 {
-            font-size: 48px;
-            line-height: 48px;
+            font-size: 30px;
+            line-height: 30px;
           }
         }
         .content {

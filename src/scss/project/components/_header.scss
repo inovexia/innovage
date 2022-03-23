@@ -1,104 +1,21 @@
-@media (min-width: map-get($grid-breakpoints, 'xs')) {
+@media (min-width:0) {
+  *{
+    font-family:'arial';
+  }
+  body{
+    overflow-x: hidden;
+  }
   header {
-
-    .bottom-header {
-      background-color: #fffefd;
-      border-bottom: 1px solid #1e1e1e;
-      position: relative;
-      z-index: 9;
-
-      
+    .logo{
+      margin-right:50px;
     }
-
-    .mega-menu {
-      background-color: #fffefd;
-      bottom: 100%;
-      display: flex;
-      height: calc(100% - 121px);
-      left: 0;
-      position: fixed;
-      transition: bottom 0.1s linear, height 0.3s ease;
-      width: 100%;
-
-      &.show {
-        bottom: 0;
+    .navbar-nav{
+      a{
+          margin-right:50px;
+          color: #fff;
+          text-decoration: none;
       }
-
-      .menu-wrapper {
-        height: 100%;
-        overflow-y: auto;
-        position: relative;
-
-        .close-menu {
-          align-items: center;
-          background-color: transparent;
-          border: none;
-          display: flex;
-          justify-content: space-between;
-          height: 45px;
-          padding: 13.5px;
-          position: absolute;
-          right: 0;
-          top: 0;
-          width: 45px;
-          z-index: 9;
-
-          &::after,
-          &::before {
-            border-left: 1px solid #1e1e1e;
-            display: inline-block;
-            content: '';
-            height: 18px;
-            left: 50%;
-            position: absolute;
-            top: 50%;
-            width: 0;
-          }
-
-          &::before {
-            transform: translate(-50%, -50%) rotate(45deg);
-          }
-
-          &::after {
-            transform: translate(-50%, -50%) rotate(-45deg);
-          }
-        }
-
-        .menu-area {
-          width: 100%;
-
-          .menu {
-            padding-top: 66px;
-            padding-bottom: 63px;
-            padding-left: 0;
-            margin-bottom: 0;
-            min-width: 140px;
-            list-style: none;
-            text-align: center;
-
-            .item {
-              padding-top: 15px;
-              padding-bottom: 15px;
-
-              .link {
-                color: #1e1e1e;
-                font-size: 14px;
-                line-height: 16px;
-                letter-spacing: 0.1em;
-                text-decoration: none;
-                text-transform: uppercase;
-
-                &.active,
-                &:hover {
-                  font-weight: 700;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
+  }
     .background-overlay {
       background-color: rgb(30, 30, 30, 0.5);
       cursor: url('./project/img/cross.svg'), url('./project/img/cross.png'),
@@ -110,7 +27,6 @@
       height: 100%;
       z-index: 10;
     }
-
     .search-box {
       align-items: center;
       border-bottom: 5px solid #f1f1f1;
@@ -348,16 +264,6 @@
         }
       }
     }
-
-    &.shrinked {
-      .mega-menu {
-        height: calc(100% - 71px);
-      }
-
-      .flying-cart {
-        height: calc(100% - 71px);
-      }
-    }
   }
 
   .account-modal {
@@ -589,97 +495,12 @@
     }
   }
 }
-@media (min-width: map-get($grid-breakpoints, 'sm')) {
+@media (min-width:576px) {
 }
-@media (min-width: map-get($grid-breakpoints, 'md')) {
+@media (min-width:768px) {
 }
-@media (min-width: map-get($grid-breakpoints, 'lg')) {
+@media (min-width:992px) {
   header {
-    .bottom-header {
-      .header-inner {
-        height: 92px;
-
-        .logo {
-          margin-right: 50px;
-        }
-
-        .navigation {
-          margin-left: 50px;
-
-          .menu-wrapper {
-            .menu-item {
-              &:not(:last-child) {
-                margin-right: 60px;
-              }
-
-              button,
-              a {
-                font-size: 14px;
-                line-height: 16px;
-              }
-
-              .toggle-cart {
-                .label {
-                  margin-right: 20px;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .mega-menu {
-      height: calc(100% - 143px);
-
-      &::before {
-        border-left: 1px solid #1e1e1e;
-        content: '';
-        width: 0;
-        height: 100%;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      .menu-wrapper {
-        display: flex;
-        justify-content: space-between;
-
-        .menu-area {
-          align-items: center;
-          display: flex;
-          height: 100%;
-          justify-content: center;
-          flex: 1 1 auto;
-          width: 50%;
-
-          .menu {
-            text-align: left;
-
-            .item {
-              padding-top: 20px;
-              padding-bottom: 20px;
-
-              .link {
-                font-size: 16px;
-                line-height: 18px;
-              }
-            }
-          }
-        }
-
-        .preview-area {
-          align-items: center;
-          display: flex;
-          height: 100%;
-          justify-content: center;
-          flex: 1 1 auto;
-          width: 50%;
-        }
-      }
-    }
-
     .search-box {
       height: 100px;
       margin-left: 90px;
@@ -733,16 +554,6 @@
             margin-bottom: 30px;
           }
         }
-      }
-    }
-
-    &.shrinked {
-      .mega-menu {
-        height: calc(100% - 93px);
-      }
-
-      .flying-cart {
-        height: 100%;
       }
     }
   }
@@ -813,7 +624,7 @@
     }
   }
 }
-@media (min-width: map-get($grid-breakpoints, 'xl')) {
+@media (min-width:1200px) {
 }
-@media (min-width: map-get($grid-breakpoints, 'xxl')) {
+@media (min-width:1400px) {
 }

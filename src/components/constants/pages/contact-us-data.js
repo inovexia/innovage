@@ -8,13 +8,13 @@ const ContactUsData = () => {
       pageTitle: `Contact`,
       address: {
         addressTitle: `ADDRESS`,
-        addressDetails: `<strong>171 E Liberty St, Toronto, Unit #123,</strong> <span class="d-block">ON M6K 3P6, Canada</span>`,
+        addressDetails: `<strong>Gorakhpur #123,</strong> <span class="d-block">273001, Uttar Pradesh, India</span>`,
       },
       getInTouch: {
         getInTouchTitle: `GET IN TOUCH`,
-        email: `info@demosoap.com`,
-        phone: `(416) 536-3916`,
-        openingHours: `Mon - Sat 12a.m.–6p.m.`,
+        email: `test@gmail.com`,
+        phone: `(+91)-1234567890`,
+        openingHours: `Mon - Sat 9AM–6PM`,
       },
     },
   }

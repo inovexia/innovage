@@ -4,8 +4,6 @@ import Breadcrumb from './breadcrumb'
 import ProductFormTablet from './product-form-tablet'
 import KeyIngredients from './key-ingredients'
 import Reviews from './reviews'
-// import SeenOnInstagram from './seen-on-instagram'
-import AboutUs from './about-us'
 
 export const Tablet = ({
   imagesData,
@@ -28,8 +26,6 @@ export const Tablet = ({
       <ProductFormTablet imagesData={imagesData} product={product} />
       <KeyIngredients product={product} />
       <Reviews product={product} setProductRating={setProductRating} />
-      {/* {process.env.NODE_ENV === 'development' && <SeenOnInstagram />} */}
-      <AboutUs />
     </div>
   )
 }

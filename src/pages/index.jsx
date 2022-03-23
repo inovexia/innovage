@@ -13,7 +13,6 @@ import useStoryblok from "../lib/storyblok"
 const IndexPage = ({ data, location }) => {
   const story = data.storyblokEntry
   const content = JSON.parse(story.content)
-  console.log(content)
   const collectionsData = data.storeAdmin
   const { seo } = HomeData(),
     { title, description, schema } = seo

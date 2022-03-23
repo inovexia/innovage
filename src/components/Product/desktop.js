@@ -6,8 +6,6 @@ import Gallery from './gallery'
 import ProductForm from './product-form'
 import KeyIngredients from './key-ingredients'
 import Reviews from './reviews'
-// import SeenOnInstagram from './seen-on-instagram'
-import AboutUs from './about-us'
 
 const Desktop = ({
   imagesData,
@@ -42,7 +40,7 @@ const Desktop = ({
           <KeyIngredients product={product} />
           <Reviews product={product} setProductRating={setProductRating} />
           {/* {process.env.NODE_ENV === 'development' && <SeenOnInstagram />} */}
-          <AboutUs />
+          
         </div>
       </div>
     </div>
