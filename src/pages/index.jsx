@@ -6,7 +6,7 @@ import HomeBanner from "~/components/home/banner"
 import AboutSection from "~/components/home/about"
 import Seo from "../components/seo"
 //import { sbEditable } from "@storyblok/storyblok-editable"
-import DynamicComponent from "../components/dynamicComponent"
+//import DynamicComponent from "../components/dynamicComponent"
 import HomePage from "../components/home"
 import useStoryblok from "../lib/storyblok"
 
