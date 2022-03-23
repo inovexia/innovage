@@ -1,0 +1,85 @@
+@media (min-width: map-get($grid-breakpoints, 'xs')) {
+  .shopify-page {
+    .container-fluid {
+      .page-data {
+        width: 100%;
+        max-width: 834px;
+        margin: 0 auto;
+
+        .page-title {
+          padding: 40px 0 20px;
+          h1 {
+            font-family: arial;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 45px;
+            color: #1e1e1e;
+            text-align: center;
+            margin-bottom: 0;
+          }
+        }
+        .content {
+          p {
+            font-size: 14px;
+            line-height: 24px;
+            font-family: Ubuntu;
+            font-weight: 400;
+            color: #1e1e1e;
+            strong {
+              font-weight: 700;
+            }
+          }
+          h1 {
+            font-size: 22px;
+            line-height: 28px;
+            font-family: Ubuntu;
+            margin-bottom: 0;
+          }
+          h2 {
+            font-size: 18px;
+            line-height: 22px;
+            font-family: Ubuntu;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: map-get($grid-breakpoints, 'sm')) {
+}
+@media (min-width: map-get($grid-breakpoints, 'md')) {
+}
+@media (min-width: map-get($grid-breakpoints, 'lg')) {
+  .shopify-page {
+    .container-fluid {
+      .page-data {
+        .page-title {
+          padding: 50px 0;
+          h1 {
+            font-size: 48px;
+            line-height: 48px;
+          }
+        }
+        .content {
+          p {
+            font-size: 16px;
+            line-height: 28px;
+          }
+          h1 {
+            font-size: 24px;
+            line-height: 30px;
+          }
+          h2 {
+            font-size: 20px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: map-get($grid-breakpoints, 'xl')) {
+}
+@media (min-width: map-get($grid-breakpoints, 'xxl')) {
+}

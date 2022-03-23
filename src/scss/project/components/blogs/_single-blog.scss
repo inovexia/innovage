@@ -1,0 +1,163 @@
+@media (min-width: map-get($grid-breakpoints, 'xs')) {
+  .single-blog {
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+    .blog-content {
+      .content {
+        .breadcrumb-box {
+          width: 100%;
+          max-width: 407px;
+
+          p {
+            font-size: 16px;
+            line-height: 28px;
+            color: #1e1e1e;
+            margin-bottom: 10px;
+
+            span {
+              padding: 0 5px;
+            }
+
+            a {
+              font-weight: 300;
+              text-decoration: none;
+              color: #1e1e1e;
+            }
+
+            strong {
+              font-weight: 700;
+            }
+          }
+        }
+
+        .blog-title {
+          font-family: arial;
+          font-size: 36px;
+          line-height: 45px;
+          font-weight: 700;
+          color: #1e1e1e;
+          margin-bottom: 0;
+        }
+
+        .mobile-thumbnail {
+          margin-top: 20px;
+        }
+
+        .meta-data {
+          margin-top: 20px;
+          color: #1e1e1e;
+          font-size: 16px;
+          line-height: 26px;
+          strong {
+            font-weight: 700;
+          }
+        }
+
+        .description {
+          margin-top: 20px;
+          font-size: 16px;
+          line-height: 26px;
+          color: #1e1e1e;
+
+          p {
+            font-size: 16px;
+            line-height: 26px;
+
+            a {
+              color: #1e1e1e;
+              word-break: break-all;
+            }
+
+            img {
+              width: 100%;
+            }
+
+            span {
+              img {
+                width: 100%;
+              }
+            }
+          }
+
+          table {
+            td {
+              a {
+                align-items: center;
+                display: flex;
+              }
+
+              img {
+                width: 100%;
+                min-height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: map-get($grid-breakpoints, 'sm')) {
+}
+@media (min-width: map-get($grid-breakpoints, 'md')) {
+}
+@media (min-width: map-get($grid-breakpoints, 'lg')) {
+  .single-blog {
+    margin-top: 50px;
+    margin-bottom: 60px;
+
+    .blog-content {
+
+      &::after {
+        content: '';
+        clear: both;
+      }
+
+      .blog-thumbnail {
+        float: right;
+        max-width: 50%;
+        margin-bottom: 50px;
+      }
+
+      .content {
+        .breadcrumb-box {
+          p {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 20px;
+
+            span {
+              padding: 0 5px;
+            }
+          }
+        }
+
+        .blog-title {
+          font-size: 48px;
+          line-height: 48px;
+        }
+
+        .meta-data {
+          margin-top: 20px;
+          font-size: 18px;
+          line-height: 28px;
+        }
+        .description {
+          margin-top: 30px;
+          font-size: 18px;
+          line-height: 30px;
+
+          p {
+            font-size: 18px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: map-get($grid-breakpoints, 'xl')) {
+}
+@media (min-width: map-get($grid-breakpoints, 'xxl')) {
+}

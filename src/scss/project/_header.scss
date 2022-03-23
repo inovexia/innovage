@@ -1,0 +1,22 @@
+*{
+    font-family: 'arial';
+}
+@media (min-width: 0) {
+    header{
+        .navbar-nav{
+            a{
+                margin-right:50px;
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width:992px) {
+    header{
+        .navbar-nav{
+            margin-left:50px;
+        }
+    }
+}

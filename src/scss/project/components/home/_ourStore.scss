@@ -1,0 +1,195 @@
+@media (min-width: map-get($grid-breakpoints, 'xs')) {
+  .follow-us {
+    border-top: 1px solid #1e1e1e;
+    border-bottom: 1px solid #1e1e1e;
+    overflow: hidden;
+    padding: 0;
+
+    .follow-us-content {
+      max-width: 1920px;
+      margin: 0 auto;
+
+      .store-mob-data {
+        text-align: center;
+        padding: 40px 0 45px;
+
+        .logo-box {
+          width: 100px;
+          margin: 0 auto;
+        }
+
+        h3 {
+          font-family: arial;
+          font-size: 36px;
+          line-height: 45px;
+          font-weight: 700;
+          color: #1e1e1e;
+          margin: 0;
+          padding-top: 5px;
+        }
+
+        .btn {
+          width: 100%;
+          max-width: 330px;
+          margin: 0 auto;
+          font-size: 12px;
+          line-height: 14px;
+          font-family: Ubuntu;
+          font-weight: 700;
+          color: #1e1e1e;
+          margin-top: 10px;
+        }
+      }
+
+      .follow-left-part {
+        .banner-image {
+          border-top: 1px solid #1e1e1e;
+        }
+      }
+
+      .follow-right {
+        height: 100%;
+
+        .follow-top {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+
+          .logo-box {
+            width: 141px;
+          }
+
+          .follow-box {
+            padding-left: 50px;
+
+            h3 {
+              font-family: arial;
+              font-weight: 700;
+              font-size: 48px;
+              line-height: 60px;
+              color: #1e1e1e;
+              margin: 0;
+            }
+
+            .btn {
+              width: 220px;
+              margin-top: 10px;
+            }
+          }
+        }
+
+        .follow-bottom {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          position: relative;
+
+          &::before {
+            content: '';
+            border-top: 1px solid #1e1e1e;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 800%;
+          }
+
+          .bottom-content {
+            width: 100%;
+            text-align: center;
+            padding: 40px 0;
+
+            h3 {
+              font-family: arial;
+              font-weight: 700;
+              font-size: 36px;
+              line-height: 48px;
+              color: #1e1e1e;
+              margin: 0;
+            }
+
+            p {
+              font-family: Ubuntu;
+              font-weight: 300;
+              font-size: 16px;
+              line-height: 26px;
+              color: #1e1e1e;
+              text-align: center;
+              width: 100%;
+              margin-top: 10px;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: map-get($grid-breakpoints, 'sm')) {
+}
+@media (min-width: map-get($grid-breakpoints, 'md')) {
+}
+@media (min-width: map-get($grid-breakpoints, 'lg')) {
+  .follow-us {
+    .follow-us-content {
+      .follow-left-part {
+        .banner-image {
+          border-top: none;
+          border-right: 1px solid #1e1e1e;
+        }
+      }
+
+      .follow-right {
+        .follow-top {
+          .logo-box {
+            width: 141px;
+          }
+
+          .follow-box {
+            padding-left: 50px;
+
+            h3 {
+              font-size: 48px;
+              line-height: 60px;
+            }
+            .btn {
+              width: 220px;
+              margin-top: 10px;
+            }
+          }
+        }
+
+        .follow-bottom {
+          .bottom-content {
+            width: unset;
+            text-align: left;
+            padding: unset;
+            h3 {
+              font-size: 48px;
+              line-height: 60px;
+            }
+            p {
+              font-size: 18px;
+              line-height: 28px;
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: map-get($grid-breakpoints, 'xl')) {
+  .follow-us {
+    .follow-us-content {
+      .follow-right {
+        .follow-top {
+        }
+
+        .follow-bottom {
+        }
+      }
+    }
+  }
+}
+@media (min-width: map-get($grid-breakpoints, 'xxl')) {
+}

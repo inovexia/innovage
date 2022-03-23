@@ -1,0 +1,121 @@
+@media (min-width: map-get($grid-breakpoints, 'xs')) {
+  .hero {
+    border-bottom: 1px solid #1e1e1e;
+
+    .wrapper {
+      margin: 0 auto;
+      max-width: 1920px;
+    }
+
+    .hero-content {
+      .banner-left-part {
+        .banner-image {
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+
+      .banner-middle-part {
+        border-top: 1px solid #1e1e1e;
+        border-bottom: 1px solid #1e1e1e;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px 45px;
+        width: 100%;
+
+        .banner-middle-content {
+          max-width: 329px;
+
+          h1 {
+            color: #1e1e1e;
+            font-family: arial;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 48px;
+            margin-bottom: 0;
+          }
+
+          p {
+            font-family: Ubuntu;
+            font-size: 16px;
+            line-height: 28px;
+            text-align: center;
+            color: #1e1e1e;
+            margin: 10px 0 0;
+          }
+
+          .btn {
+            display: flex;
+            margin-top: 20px;
+            margin-right: auto;
+            margin-left: auto;
+          }
+        }
+      }
+
+      .banner-right-part {
+        .banner-image {
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: map-get($grid-breakpoints, 'sm')) {
+}
+@media (min-width: map-get($grid-breakpoints, 'md')) {
+}
+@media (min-width: map-get($grid-breakpoints, 'lg')) {
+  .hero {
+    .hero-content {
+      .banner-middle-part {
+        border-top: none;
+        border-bottom: none;
+        border-left: 1px solid #1e1e1e;
+        border-right: 1px solid #1e1e1e;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .banner-middle-content {
+          h1 {
+            font-size: 72px;
+            line-height: 72px;
+          }
+
+          p {
+            font-size: 18px;
+            line-height: 30px;
+          }
+
+          .btn {
+            width: 260px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: map-get($grid-breakpoints, 'xl')) {
+  .hero {
+    .hero-content {
+      .banner-middle-part {
+        .banner-middle-content {
+          p {
+            margin: 20px 0 0;
+          }
+
+          .btn {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: map-get($grid-breakpoints, 'xxl')) {
+}

@@ -1,0 +1,31 @@
+@media (min-width: 0) {
+  .gsi {
+    font-family: 'GS-Starter-Icon';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .gs-star:before {
+    content: '\e900';
+  }
+  .gs-instagram:before {
+    content: '\e901';
+  }
+  .gs-search-d:before {
+    content: '\e986';
+  }
+  .gs-facebook-alt:before {
+    content: '\ea90';
+  }
+  .gs-twitter-alt:before {
+    content: '\ea96';
+  }
+  .gs-search-l:before {
+    content: '\e9ce';
+  }
+}

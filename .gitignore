@@ -1,0 +1,9 @@
+# Environment
+.cache
+.vscode
+# Folders
+/node_modules
+/public
+# Files
+package-lock.json
+*.code-workspace
