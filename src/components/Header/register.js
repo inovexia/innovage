@@ -69,7 +69,7 @@ const RegisterForm = ({ doDismiss, doDismiss: onSuccess }) => {
                   aria-label="Mobile"
                   placeholder="MOBILE"
                   onChange={({ target: { value } }) =>
-                    setPhone(value.includes("+91") ? value : `+91${value}`)
+                    setPhone(value.includes("+1") ? value : `+1${value}`)
                   }
                 />
               </div>

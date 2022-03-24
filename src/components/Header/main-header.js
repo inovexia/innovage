@@ -162,10 +162,10 @@ const MainHeader = ({
                       </Link>
                     ) : (
                       <button
-                        // onClick={() => {
-                        //   closeMegaMenu()
-                        //   handleShow()
-                        // }}
+                        onClick={() => {
+                          closeMegaMenu()
+                          handleShow()
+                        }}
                         aria-label={"Login"}
                       >
                         <span>{"Login"}</span>
