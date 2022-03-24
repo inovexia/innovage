@@ -1,127 +1,109 @@
-import React, { useEffect, useState } from 'react'
-import { GatsbyImage } from 'gatsby-plugin-image'
-import ReactHtmlParser from 'html-react-parser'
+import React from 'react'
+import { render } from 'storyblok-rich-text-react-renderer'
 
-const AboutUs = ({
-  data: {
-    pageTitle,
-    aboutUsTitle,
-    aboutUsDescription,
-    aboutUsImage,
-    aboutUsImageLg,
-    section2Image,
-    section2Description,
-    section3Image,
-    section3Description,
-    section4Image,
-    section4Description,
-    gallery,
-  },
-}) => {
-  const [isTablet, setTablet] = useState(false)
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setTablet(window.outerWidth < 992 ? true : false)
-      window.addEventListener('resize', () => {
-        setTablet(window.outerWidth < 992 ? true : false)
-      })
-    }
-  }, [setTablet])
+const AboutUs = ({ data }) => {
   return (
-    <section className={'about-us'}>
-      <div className={'inner-wrapper'}>
-        <div className={'row gx-0 section1'}>
-          <div className={'col col-12 col-lg-6 text-col'}>
-            <div className={'about-us-left'}>
-              <div className={'left-content'}>
-                <h1>{aboutUsTitle}</h1>
-                <p>{ReactHtmlParser(aboutUsDescription)}</p>
-              </div>
-            </div>
-          </div>
-          <div className={'col col-12 col-lg-6 img-col'}>
-            <div className={'about-us-right'}>
-              <GatsbyImage
-                image={
-                  isTablet
-                    ? aboutUsImage.childImageSharp.gatsbyImageData
-                    : aboutUsImageLg.childImageSharp.gatsbyImageData
-                }
-                alt={'left-image'}
-                className={'w-100'}
-              />
-            </div>
-          </div>
-        </div>
-        <div className={'row gx-0 section2'}>
-          <div className={'col col-12 col-lg-6 order-2 order-lg-1 img-col'}>
-            <div className={'about-us-right'}>
-              <GatsbyImage
-                image={
-                  isTablet
-                    ? section2Image.childImageSharp.gatsbyImageData
-                    : section2Image.childImageSharp.gatsbyImageData
-                }
-                alt={'left-image'}
-                className={'w-100'}
-              />
-            </div>
-          </div>
-          <div className={'col col-12 col-lg-6 order-1 order-lg-2 text-col'}>
-            <div className={'about-us-left'}>
-              <div className={'content'}>
-                <p>{ReactHtmlParser(section2Description)}</p>
+    <>
+      <section
+        className={'about-us-banner'}
+        style={{
+          backgroundImage: `url(${data.about_banner_image})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div className={`bg-layer`}></div>
+        <div className={`container-fluid h-100`}>
+          <div className={`row h-100`}>
+            <div className={`col-12 banner-content-outer`}>
+              <div className={`about-banner-content`}>
+                <h1>{data.page_title}</h1>
+                {/* <h2>{data.about_banner_title}</h2> */}
+                {data.about_banner_subtitle && data.about_banner_subtitle ? (
+                  <p>{render(data.about_banner_subtitle)}</p>
+                ) : (
+                  ''
+                )}
               </div>
             </div>
           </div>
         </div>
-        <div className={'row gx-0 section3'}>
-          <div className={'col col-12 col-lg-6 text-col'}>
-            <div className={'about-us-left'}>
-              <div className={'left-content'}>
-                <p>{ReactHtmlParser(section3Description)}</p>
+      </section>
+      <section className={`why-choose-us py-5`}>
+        <div className={`container-fluid`}>
+          <div className={`row`}>
+            <div className={`col-12 col-md-6`}>
+              <div className={`why-choose-left pe-0 pe-md-5`}>
+                <h3>{data.why_choose_us_title}</h3>
+                {data.why_choose_us_description &&
+                data.why_choose_us_description ? (
+                  <p>{render(data.why_choose_us_description)}</p>
+                ) : (
+                  ''
+                )}
               </div>
             </div>
-          </div>
-          <div className={'col col-12 col-lg-6 img-col'}>
-            <div className={'about-us-right'}>
-              <GatsbyImage
-                image={
-                  isTablet
-                    ? section3Image.childImageSharp.gatsbyImageData
-                    : section3Image.childImageSharp.gatsbyImageData
-                }
-                alt={'left-image'}
-                className={'w-100'}
-              />
-            </div>
+            <div
+              className={`col-12 col-md-6 why-choose-left-image`}
+              style={{
+                backgroundImage: `url(${data.why_choose_us_image})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+              }}
+            ></div>
           </div>
         </div>
-        <div className={'row gx-0 section4 d-none d-lg-flex'}>
-          <div className={'col col-12 col-lg-6 order-2 order-lg-1 img-col'}>
-            <div className={'about-us-right'}>
-              <GatsbyImage
-                image={
-                  isTablet
-                    ? section4Image.childImageSharp.gatsbyImageData
-                    : section4Image.childImageSharp.gatsbyImageData
-                }
-                alt={'left-image'}
-                className={'w-100'}
-              />
-            </div>
-          </div>
-          <div className={'col col-12 col-lg-6 order-1 order-lg-2 text-col'}>
-            <div className={'about-us-left'}>
-              <div className={'content'}>
-                {ReactHtmlParser(section4Description)}
+      </section>
+      <section className={`our-services py-5`}>
+            <div className={`container-fluid`}>
+              <div className={`row`}>
+                <div className={`col-12`}>
+                  <div className={`services-entry-header`}>
+                  <h3>{data.our_services_title}</h3>
+                  {data.our_services_description ? <p>{data.our_services_description}</p> : ''}
+                  </div>
+                </div>
+              </div>
+              <div className={`row`}>
+                <div className={`col-12 col-md-4 mb-3 mb-md-0`}>
+                  <div className={`our-service-card`}>
+                    <div className={`service-icon`}>
+                      <img src={data.service1_icon} alt={data.service1_title}/>
+                    </div>
+                    <div classname={`service-body`}>
+                      <h3>{data.service1_title}</h3>
+                      {data.service1_description ? <p>{data.service1_description}</p> : ''}
+                    </div>
+                  </div>
+                </div>
+                <div className={`col-12 col-md-4 mb-3 mb-md-0`}>
+                <div className={`our-service-card`}>
+                    <div className={`service-icon`}>
+                      <img src={data.service2_icon} alt={data.service2_title}/>
+                    </div>
+                    <div classname={`service-body`}>
+                      <h3>{data.service2_title}</h3>
+                      {data.service2_description ? <p>{data.service2_description}</p> : ''}
+                    </div>
+                  </div>
+                </div>
+                <div className={`col-12 col-md-4 mb-3 mb-md-0`}>
+                <div className={`our-service-card`}>
+                    <div className={`service-icon`}>
+                      <img src={data.service3_icon} alt={data.service3_title}/>
+                    </div>
+                    <div classname={`service-body`}>
+                      <h3>{data.service3_title}</h3>
+                      {data.service3_description ? <p>{data.service3_description}</p> : ''}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }
 
