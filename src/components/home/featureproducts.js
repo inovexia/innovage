@@ -9,7 +9,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 const FeaturedProducts = ({data}) => {
   return (
-  <section className={`py-5`}>
+  <section className={`py-5 feat-products`}>
     
     <Container>
       <div className={`row`}>

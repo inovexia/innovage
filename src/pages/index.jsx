@@ -8,7 +8,7 @@ import Seo from "../components/seo"
 //import { sbEditable } from "@storyblok/storyblok-editable"
 //import DynamicComponent from "../components/dynamicComponent"
 import HomePage from "../components/home"
-import useStoryblok from "../lib/storyblok"
+//import useStoryblok from "../lib/storyblok"
 
 const IndexPage = ({ data, location }) => {
   const story = data.storyblokEntry
