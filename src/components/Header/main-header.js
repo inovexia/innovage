@@ -161,16 +161,16 @@ const MainHeader = ({
                         <span>{myAccountLabel}</span>
                       </Link>
                     ) : (
-                      <button
-                        onClick={() => {
-                          closeMegaMenu()
-                          handleShow()
-                        }}
-                        aria-label={"Login"}
-                      >
-                        <span>{"Login"}</span>
-                      </button>
-                      // <Link to={`/login`} >Login</Link>
+                      // <button
+                      //   onClick={() => {
+                      //     closeMegaMenu()
+                      //     handleShow()
+                      //   }}
+                      //   aria-label={"Login"}
+                      // >
+                      //   <span>{"Login"}</span>
+                      // </button>
+                       <Link to={`/login`} >Login</Link>
                     )}
                   </li>
                   <li className={"menu-item"}>
@@ -183,7 +183,7 @@ const MainHeader = ({
                     >
                       <span className={"label"}>{cartLabel}</span>
                       <span className={"quantity"}>
-                        {quantity < 10 ? quantity : `9+`}
+                       ({quantity < 10 ? quantity : `9+`}) 
                       </span>
                     </button>
                   </li>

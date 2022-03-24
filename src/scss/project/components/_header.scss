@@ -15,6 +15,22 @@
           color: #fff;
           text-decoration: none;
       }
+      .right-nav{
+        ul {
+          li {
+            margin-left: 15px;
+            text-align: center;
+            a{
+              margin: 0;
+            }
+            button {
+              border: none;
+              background-color: transparent;
+              color: #fff;
+            }
+          }
+        }
+      }
   }
     .background-overlay {
       background-color: rgb(30, 30, 30, 0.5);

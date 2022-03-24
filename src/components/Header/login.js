@@ -59,7 +59,7 @@ const CUSTOMER_PASSWORD_RESET = gql`
   }
 `
 
-const LoginForm = ({ doDismiss: onSuccess }) => {
+const LoginForm = () => {
   const {
       store: { checkout },
       setValue,
@@ -72,7 +72,7 @@ const LoginForm = ({ doDismiss: onSuccess }) => {
     [customerAssociate] = useMutation(CHECKOUT_CUSTOMER_ASSOCIATE, {
       onCompleted: data => {
         if (data) {
-          onSuccess()
+          // onSuccess()
           navigate(`/account/`)
         }
       },

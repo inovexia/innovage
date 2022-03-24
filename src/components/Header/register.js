@@ -32,7 +32,7 @@ const CUSTOMER_LOGIN = gql`
   }
 `
 
-const RegisterForm = ({ doDismiss, doDismiss: onSuccess }) => {
+const RegisterForm = ({ doDismiss}) => {
   const { setValue } = useContext(StoreContext),
     [firstName, setFirstName] = useState(""),
     [lastName, setLastName] = useState(""),
@@ -69,7 +69,7 @@ const RegisterForm = ({ doDismiss, doDismiss: onSuccess }) => {
                   aria-label="Mobile"
                   placeholder="MOBILE"
                   onChange={({ target: { value } }) =>
-                    setPhone(value.includes("+1") ? value : `+1${value}`)
+                    setPhone(value.includes("+91") ? value : `+91${value}`)
                   }
                 />
               </div>
@@ -92,12 +92,12 @@ const RegisterForm = ({ doDismiss, doDismiss: onSuccess }) => {
                 />
               </div>
               <div className="field d-flex justify-content-between">
-                <button
+                {/* <button
                   className={"btn btn-demo-primary-dark btn-dismiss-modal"}
                   onClick={doDismiss}
                 >
                   CANCEL
-                </button>
+                </button> */}
                 <button
                   className={"btn btn-demo-primary btn-register"}
                   onClick={() => {
@@ -126,7 +126,7 @@ const RegisterForm = ({ doDismiss, doDismiss: onSuccess }) => {
                             result.data.customerAccessTokenCreate
                               .customerAccessToken
                           )
-                          onSuccess()
+                          // onSuccess()
                         } else {
                           alert(
                             result.data.customerCreate.customerUserErrors

@@ -4,11 +4,87 @@
         width: 100%;
         max-width: 375px;
         margin: 0px auto;
+        .login {
+            .field{
+                input {
+                    width: 100%;
+                    margin-bottom: 15px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: 1px solid rgba(0,0,0,0.5);
+                    box-shadow: none;
+                }
+            }
+            .btn-submit {
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                background-color: #356902;
+                border-radius: 89.5709px;
+                border: none;
+                color: #ffffff;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                font-size: 16px;
+                font-weight: 700;
+                height: 45px;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                letter-spacing: 0.05em;
+                line-height: 19px;
+                padding: 0;
+                width: 176px;
+            }
+            .btn-forgot {
+                background-color: transparent;
+                border: none;
+                margin-top: 20px;
+                font-weight: 700;
+                color: #356902;
+            }
+        }
+       
     }
     .register-part {
         width: 100%;
         max-width: 375px;
         margin: 0px auto;
+        .register{
+            .field{
+                input {
+                    width: 100%;
+                    margin-bottom: 15px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: 1px solid rgba(0,0,0,0.5);
+                    box-shadow: none;
+                }
+                .btn-register {
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    background-color: #356902;
+                    border-radius: 89.5709px;
+                    border: none;
+                    color: #ffffff;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    font-size: 16px;
+                    font-weight: 700;
+                    height: 45px;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    letter-spacing: 0.05em;
+                    line-height: 19px;
+                    padding: 0;
+                    width: 176px;
+                }
+            }
+        }
     }
 }
 }
