@@ -9,6 +9,7 @@ import { Navbar, Container, Nav, Tab, Modal} from "react-bootstrap"
 import { StoreContext } from "~/provider"
 import GetPrice from "~/components/functions/get-price"
 import Logo from "~/components/icons/logo"
+import SearchIcon from "~/components/icons/search-icon"
 import GSIcon from "~/components/gs-icon"
 import Login from "./login"
 import Register from "./register"
@@ -151,8 +152,9 @@ const MainHeader = ({
                       type={"button"}
                       aria-label={"Search"}
                       onClick={() => openSearch()}
+                      className={`s-btn`}
                     >
-                      <GSIcon icon={`gs-search-d`} />
+                      <SearchIcon/>
                     </button>
                   </li>
                   <li className={"menu-item"}>
@@ -235,7 +237,7 @@ const MainHeader = ({
             type={"submit"}
             aria-label={"Search"}
           >
-            <GSIcon icon={"gs-search-d"} />
+            <SearchIcon/>
           </button>
         </form>
       )}
