@@ -17,15 +17,15 @@ const HomeData = () => {
   return {
     seo: {
       title: null,
-      description: `Handmade soaps with natural organic and ethical ingredients made in our Toronto workshop.`,
+      description: `Storyblok Gatsby Shopify Starter Theme.`,
       schema: {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'Demosoap',
+        name: 'Starter Theme',
         image: `${site.siteMetadata.siteUrl}/og-image.jpg`,
         '@id': '',
         url: site.siteMetadata.siteUrl,
-        telephone: '(416) 536-3916',
+        telephone: '+91-1234567890',
         priceRange: '$',
         address: {
           '@type': 'PostalAddress',
@@ -54,9 +54,9 @@ const HomeData = () => {
           closes: '18:00',
         },
         sameAs: [
-          'https://www.facebook.com/Demo-Soap-184227641589990',
-          'https://twitter.com/demosoap',
-          'http://instagram.com/demosoap',
+          'https://www.facebook.com/starter-theme-184227641589990',
+          'https://twitter.com/starter-theme',
+          'http://instagram.com/starter-theme',
         ],
       },
     },
