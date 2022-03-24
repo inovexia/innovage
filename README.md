@@ -27,5 +27,5 @@
   - See all addresses (Can Create, Update, Delete and choose default address)
 
 ## 💫 Deploy
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f4434381-4653-45ea-b6c7-c30a80e06854/deploy-status)](https://app.netlify.com/sites/storyblok-gatsby/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5c921645-cd27-44b6-97d9-2d914f345541/deploy-status)](https://app.netlify.com/sites/storyblok-gatsby/deploys)
 <!-- AUTO-GENERATED-CONTENT:END -->
