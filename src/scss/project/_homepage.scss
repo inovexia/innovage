@@ -9,7 +9,7 @@
             height:100%;
             left:0;
             top:0;
-            z-index:99;
+            z-index:9;
             .container{
                 .row{
                     align-items: center;
@@ -17,6 +17,12 @@
                     .banner-content{
                         text-align:center;
                         color:#fff;
+                         a {
+                            color: #fff;
+                            text-decoration: none;
+                            background-color: #3E7B02;
+                            padding: 10px 20px;
+                        }
                     }
                 }
             }

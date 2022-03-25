@@ -45,6 +45,7 @@
     "gatsby-plugin-sass": "^5.0.0",
     "gatsby-plugin-sharp": "^4.0.1",
     "gatsby-plugin-sitemap": "^5.0.0",
+    "gatsby-plugin-tawk.to": "^1.0.8",
     "gatsby-source-filesystem": "^4.0.0",
     "gatsby-source-graphql": "^4.0.0",
     "gatsby-source-shopify": "^6.0.0",

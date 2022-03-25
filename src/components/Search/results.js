@@ -6,7 +6,8 @@ import isBrowser from '~/components/functions/is-browser'
 import ArrLeft from '~/components/icons/arr-left'
 import ArrRight from '~/components/icons/arr-right'
 import ProductBox from './product-box'
-import Loader from "~/images/loader.gif"
+import Sidebar from './sidebar'
+import Loader from '~/images/loader.gif'
 
 const GET_PRODUCTS = gql`
   query GET_PRODUCTS(
@@ -174,77 +175,96 @@ const Results = () => {
   }, [setSearchQuery])
 
   return (
-    <div className={'listing-main'}>
-      <div className={'entry-header'}>
+    <>
+      <div className={`row py-5`}>
         <h2 className={'title'}>
           <strong>{'Result for: '}</strong>
           <span>"{searchQuery}"</span>
         </h2>
       </div>
-      {loading ? (
-        <div
-          className={
-            'd-flex flex-grow-1 align-items-center justify-content-center'
-          }
-        >
-          <div
-            className={'spinner-grows'}
-            style={{ width: '3rem', height: '3rem' }}
-            role={'status'}
-          >
-           
-            <img src={Loader} alt="loader" />
-          </div>
-        </div>
-      ) : (
-        <div className={'products'}>
-          {products && products.length ? (
-            <React.Fragment>
-              <div className={'row'}>
-                {products.map(({ product, cursor }) => {
-                  return <ProductBox key={cursor} product={product} />
-                })}
+      <div className={`row`}>
+      <div className={`col-12 col-md-9`}>
+          <div className={'listing-main'}>
+            <div className={'entry-header py-0'}></div>
+            {loading ? (
+              <div
+                className={
+                  'd-flex flex-grow-1 align-items-center justify-content-center'
+                }
+              >
+                <div
+                  className={'spinner-grows'}
+                  style={{ width: '3rem', height: '3rem' }}
+                  role={'status'}
+                >
+                  <img src={Loader} alt="loader" />
+                </div>
               </div>
-              <div className={'pagination'}>
-                {isLoading && (
-                  <div className={'spinner-grow'} role={'status'}>
-                    <span className={'visually-hidden'}>{'Loading...'}</span>
+            ) : (
+              <div className={'products'}>
+                {products && products.length ? (
+                  <React.Fragment>
+                    <div className={'row'}>
+                      {products.map(({ product, cursor }) => {
+                        return <ProductBox key={cursor} product={product} />
+                      })}
+                    </div>
+                    <div className={'pagination'}>
+                      {isLoading && (
+                        <div className={'spinner-grow'} role={'status'}>
+                          <span className={'visually-hidden'}>
+                            {'Loading...'}
+                          </span>
+                        </div>
+                      )}
+                      {!isLoading &&
+                        pageInfo &&
+                        (pageInfo.hasPreviousPage || pageInfo.hasNextPage) && (
+                          <React.Fragment>
+                            <button
+                              type={'button'}
+                              className={'btn btn-demo-primary me-4 prev'}
+                              onClick={() => loadPrev()}
+                              disabled={!pageInfo.hasPreviousPage}
+                            >
+                              <ArrLeft
+                                width={24}
+                                height={11}
+                                stroke={'#1e1e1e'}
+                              />
+                              <span className={'label ms-2'}>PREV</span>
+                            </button>
+                            <button
+                              type={'button'}
+                              className={'btn btn-demo-primary next'}
+                              onClick={() => loadNext()}
+                              disabled={!pageInfo.hasNextPage}
+                            >
+                              <span className={'label me-2'}>NEXT</span>
+                              <ArrRight
+                                width={24}
+                                height={11}
+                                stroke={'#1e1e1e'}
+                              />
+                            </button>
+                          </React.Fragment>
+                        )}
+                    </div>
+                  </React.Fragment>
+                ) : (
+                  <div className={'alert alert-info'} role={'alert'}>
+                    {'No products found'}
                   </div>
                 )}
-                {!isLoading &&
-                  pageInfo &&
-                  (pageInfo.hasPreviousPage || pageInfo.hasNextPage) && (
-                    <React.Fragment>
-                      <button
-                        type={'button'}
-                        className={'btn btn-demo-primary me-4 prev'}
-                        onClick={() => loadPrev()}
-                        disabled={!pageInfo.hasPreviousPage}
-                      >
-                        <ArrLeft width={24} height={11} stroke={'#1e1e1e'} />
-                        <span className={'label ms-2'}>PREV</span>
-                      </button>
-                      <button
-                        type={'button'}
-                        className={'btn btn-demo-primary next'}
-                        onClick={() => loadNext()}
-                        disabled={!pageInfo.hasNextPage}
-                      >
-                        <span className={'label me-2'}>NEXT</span>
-                        <ArrRight width={24} height={11} stroke={'#1e1e1e'} />
-                      </button>
-                    </React.Fragment>
-                  )}
               </div>
-            </React.Fragment>
-          ) : (
-            <div className={'alert alert-info'} role={'alert'}>
-              {'No products found'}
-            </div>
-          )}
+            )}
+          </div>
         </div>
-      )}
-    </div>
+        <div className={`col-12 col-md-3`}>
+          <Sidebar />
+        </div>
+      </div>
+    </>
   )
 }
 

@@ -8,6 +8,7 @@ import Seo from "../components/seo"
 //import { sbEditable } from "@storyblok/storyblok-editable"
 //import DynamicComponent from "../components/dynamicComponent"
 import HomePage from "../components/home"
+import NewsLetter from "../components/Newsletter"
 //import useStoryblok from "../lib/storyblok"
 
 const IndexPage = ({ data, location }) => {
@@ -28,6 +29,7 @@ const IndexPage = ({ data, location }) => {
                 <React.Fragment key={component}>
                   <HomeBanner {...rest} />
                   <HomePage data={collectionsData} story={content} />
+                  
                 </React.Fragment>
               )
             case "About Section":
@@ -37,6 +39,7 @@ const IndexPage = ({ data, location }) => {
           }
         })(component)
       )}
+      <NewsLetter/>
     </>
   )
 }

@@ -55,12 +55,12 @@ const ProductBox = ({
               <h6 className={'price'}>{GetPrice(productPrice)}</h6>
             </div>
             <div className={'actions'}>
-              <div className={'learn-more'}>
+              <div className={'learn-more text-center'}>
                 <Link
                   className={'btn btn-demo-primary'}
                   to={`/product/${handle}`}
                 >
-                  {`See ${getShortTitle(title)}`}
+                  {`Read More`}
                 </Link>
               </div>
               {availableForSale && <AddToBag variant={firstVariant.node} />}
