@@ -69,6 +69,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-tawk.to`,
+      options: {
+        tawkId: "623de3a40bfe3f4a876fb604",
+        tawkKey: "1fv0s2h00",
+        // get this from the tawk script widget
+      },
+    },
+    {
       resolve: 'gatsby-source-shopify',
       options: {
         storeUrl: `inovexia-store.myshopify.com`,

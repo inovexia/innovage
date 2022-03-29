@@ -3,7 +3,7 @@ import { useIsMounted } from 'react-tidy'
 import { Link } from 'gatsby'
 
 import isTablet from '~/components/functions/is-tablet'
-import getShortTitle from '~/components/functions/get-short-title'
+//import getShortTitle from '~/components/functions/get-short-title'
 import AddToBag from '~/components/AddToBag'
 import onSale from '~/components/functions/on-sale'
 import GetPrice from '~/components/functions/get-price'

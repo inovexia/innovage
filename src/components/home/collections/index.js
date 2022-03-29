@@ -1,11 +1,11 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import {Container} from "react-bootstrap"
-import { graphql, Link } from "gatsby"
-import { StaticImage } from 'gatsby-plugin-image'
+import {Link } from "gatsby"
+//import { StaticImage } from 'gatsby-plugin-image'
 
 const CollectionsSlider = ({data}) => {
   return (

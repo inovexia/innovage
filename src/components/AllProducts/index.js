@@ -2,7 +2,7 @@ import React from 'react'
 
 import Sidebar from './sidebar'
 import Results from './results'
-import { graphql, Link } from "gatsby"
+import { graphql} from "gatsby"
 
 const AllProducts = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react"
-import { graphql } from "gatsby"
-import useStoryblok from "~/lib/storyblok"
+//import { graphql } from "gatsby"
+//import useStoryblok from "~/lib/storyblok"
 import {Container} from "react-bootstrap"
 
 const HomeBanner = ({

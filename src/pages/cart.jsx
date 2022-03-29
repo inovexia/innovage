@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "gatsby"
+//import { Link } from "gatsby"
 import Seo from '~/components/seo'
 import Cart from '~/components/Cart'
 

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import ReactHtmlParser from 'html-react-parser'
-import emailjs from 'emailjs-com'
+//import ReactHtmlParser from 'html-react-parser'
+//import emailjs from 'emailjs-com'
 import ReCAPTCHA from 'react-google-recaptcha'
 
-import GSIcon from '~/components/gs-icon'
+//import GSIcon from '~/components/gs-icon'
 
 const Contact = ({ data }) => {
   const subject = `New contact request from Contact Us form`,

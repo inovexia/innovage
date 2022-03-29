@@ -1,6 +1,4 @@
 import React from 'react'
-
-import Sidebar from './sidebar'
 import Results from './results'
 
 const Search = () => {
