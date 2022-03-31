@@ -29,3 +29,5 @@
 ## 💫 Deploy
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5c921645-cd27-44b6-97d9-2d914f345541/deploy-status)](https://app.netlify.com/sites/storyblok-gatsby/deploys)
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+<a href="https://storyblok-gatsby.netlify.app/">Netlify Link</a>
