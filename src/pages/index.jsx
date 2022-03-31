@@ -1,15 +1,11 @@
 import * as React from "react"
 import { graphql} from "gatsby"
-//import { StaticImage } from "gatsby-plugin-image"
 import HomeData from "~/components/constants/pages/home-data"
 import HomeBanner from "~/components/home/banner"
 import AboutSection from "~/components/home/about"
 import Seo from "../components/seo"
-//import { sbEditable } from "@storyblok/storyblok-editable"
-//import DynamicComponent from "../components/dynamicComponent"
 import HomePage from "../components/home"
 import NewsLetter from "../components/Newsletter"
-//import useStoryblok from "../lib/storyblok"
 
 const IndexPage = ({ data, location }) => {
   const story = data.storyblokEntry

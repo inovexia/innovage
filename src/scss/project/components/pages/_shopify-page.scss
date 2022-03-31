@@ -46,7 +46,7 @@
 }
 @media (min-width: map-get($grid-breakpoints, 'md')) {
 }
-@media (min-width: map-get($grid-breakpoints, 'lg')) {
+@media (min-width: 992px) {
   .shopify-page {
     .container-fluid {
       .page-data {
@@ -75,7 +75,7 @@
     }
   }
 }
-@media (min-width: map-get($grid-breakpoints, 'xl')) {
+@media (min-width: 1200px) {
 }
-@media (min-width: map-get($grid-breakpoints, 'xxl')) {
+@media (min-width: 1400px) {
 }

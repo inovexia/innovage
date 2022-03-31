@@ -438,21 +438,8 @@
                 }
 
                 .btn {
-                  //   border: none;
-                  //   background-color: #ff5c7b;
-                  //   border-radius: 89.5709px;
-                  //   color: #ffffff;
                   margin-right: 20px;
                   padding: 10px 30px;
-                  //   display: flex;
-                  //   justify-content: center;
-                  //   align-items: center;
-                  //   height: 45px;
-                  //   width: 193px;
-                  //   font-size: 16px;
-                  //   font-weight: 700;
-                  //   line-height: 19px;
-                  //   letter-spacing: 0.05em;
                 }
               }
             }
@@ -514,11 +501,11 @@
     }
   }
 }
-@media (min-width: map-get($grid-breakpoints, 'sm')) {
+@media (min-width:576px) {
 }
-@media (min-width: map-get($grid-breakpoints, 'md')) {
+@media (min-width:768px) {
 }
-@media (min-width: map-get($grid-breakpoints, 'lg')) {
+@media (min-width: 992px) {
   .my-account {
     .wrapper {
     }
@@ -711,7 +698,7 @@
     }
   }
 }
-@media (min-width: map-get($grid-breakpoints, 'xl')) {
+@media (min-width: 1200px) {
 }
-@media (min-width: map-get($grid-breakpoints, 'xxl')) {
+@media (min-width: 1400px) {
 }
