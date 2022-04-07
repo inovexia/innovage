@@ -1,8 +1,8 @@
 /**
  * @type {{wordPressUrl: string}}
  */
- const config = {
-    wordPressUrl: `http://localhost/innovage-gatsby`,
-  }
-  
-  module.exports = config   
+const config = {
+  wordPressUrl: `https://appsandprojects.com/wp-gatsby/innovage-gatsby-website`,
+}
+
+module.exports = config
