@@ -1,8 +1,8 @@
 {
-  "name": "demosoap",
-  "description": "🛒 Theme to build a blazing simple and fast store with Gatsby and Shopify.",
-  "version": "2.0.0",
-  "author": "Ankit Shukla <4nkit5hukla@gmail.com>",
+  "name": "innovage",
+  "description": "Innovage is a software development agency.",
+  "version": "1.0.0",
+  "author": "Innovage Softwares",
   "scripts": {
     "build": "gatsby build",
     "clean-build": "gatsby clean && gatsby build",
@@ -16,20 +16,13 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
-    "@apollo/client": "^3.4.16",
-    "@apollo/react-hooks": "^4.0.0",
-    "@babel/eslint-parser": "^7.17.0",
-    "@storyblok/storyblok-editable": "^1.1.0",
-    "apollo-boost": "^0.4.9",
-    "apollo-link-context": "^1.0.20",
     "atob": "^2.1.2",
     "axios": "^0.26.0",
     "dotenv": "^10.0.0",
     "emailjs-com": "^3.2.0",
     "es-module-lexer": "^0.10.4",
-    "gatsby": "^4.0.2",
+    "gatsby": "^4.11.2",
     "gatsby-plugin-advanced-sitemap-v-2": "^2.0.0",
-    "gatsby-plugin-apollo": "^3.0.2",
     "gatsby-plugin-fontawesome-css": "^1.2.0",
     "gatsby-plugin-gatsby-cloud": "^4.0.0",
     "gatsby-plugin-image": "^2.0.0",
@@ -45,11 +38,14 @@
     "gatsby-plugin-sass": "^5.0.0",
     "gatsby-plugin-sharp": "^4.0.1",
     "gatsby-plugin-sitemap": "^5.0.0",
+    "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-plugin-tawk.to": "^1.0.8",
+    "gatsby-remark-images": "^6.11.1",
+    "gatsby-remark-lazy-load": "^1.0.2",
     "gatsby-source-filesystem": "^4.0.0",
     "gatsby-source-graphql": "^4.0.0",
-    "gatsby-source-shopify": "^6.0.0",
-    "gatsby-source-storyblok": "^3.1.2",
+    "gatsby-source-wordpress": "^6.11.2",
+    "gatsby-transformer-remark": "^5.11.1",
     "gatsby-transformer-sharp": "^4.0.0",
     "graphql-tag": "^2.12.5",
     "html-react-parser": "^1.4.0",
@@ -90,11 +86,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/4nkit-5hukla/demosoap-neo.git"
+    "url": "git+https://github.com/inovexia/innovage.git"
   },
   "bugs": {
-    "url": "https://github.com/4nkit-5hukla/demosoap-neo/issues"
+    "url": "https://github.com/inovexia/innovage.git"
   },
-  "homepage": "https://github.com/4nkit-5hukla/demosoap-neo#readme",
+  "homepage": "https://github.com/inovexia/innovage.git",
   "main": "gatsby-browser.js"
 }
