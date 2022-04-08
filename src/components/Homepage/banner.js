@@ -25,7 +25,9 @@ const HomeBanner = ({ data }) => {
               <div className={`row`}>
                 <div className={`col-12 col-md-4`}>
                   <div className={`ribbon-data`}>
-                    <Earth />
+                    <span className={`ribbon-icon`}>
+                      <Earth />
+                    </span>
                     <CountUp start={0} end={data.totalProjects} duration={3}>
                       {data.totalProjects}
                     </CountUp>
@@ -33,10 +35,30 @@ const HomeBanner = ({ data }) => {
                   </div>
                 </div>
                 <div className={`col-12 col-md-4`}>
-                  <div classname={`ribbon-data`}>3</div>
+                  <div className={`ribbon-data`}>
+                    <span className={`ribbon-icon`}>
+                      <Earth />
+                    </span>
+                    <CountUp
+                      start={0}
+                      end={data.totalHappyClients}
+                      duration={3}
+                    >
+                      {data.totalHappyClients}
+                    </CountUp>
+                    + {data.happyClients}
+                  </div>
                 </div>
                 <div className={`col-12 col-md-4`}>
-                  <div classname={`ribbon-data`}>3</div>
+                  <div className={`ribbon-data`}>
+                    <span className={`ribbon-icon`}>
+                      <Earth />
+                    </span>
+                    <CountUp start={0} end={data.totalInvested} duration={3}>
+                      {data.totalInvested}
+                    </CountUp>
+                    + {data.invested}
+                  </div>
                 </div>
               </div>
             </div>
