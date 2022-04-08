@@ -3,7 +3,7 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: `innovagesoftwares`,
+    title: `Innovage Softwares`,
     description: `Innovage Softwares`,
     author: `@innovagesoftwares`,
     wpUrl: config.wordPressUrl,

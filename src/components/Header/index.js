@@ -32,7 +32,7 @@ const Header = () => {
   `)
 
   return (
-    <header style={{ backgroundColor: '#212529' }}>
+    <header className={`pt-4`}>
       <Navbar collapseOnSelect expand="lg" variant="dark">
         <div className={`container-fluid`}>
           <Link to={'/'} className={`logo`}>

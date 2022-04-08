@@ -8,27 +8,11 @@
   // 100% wide container at all breakpoints
   .container-fluid {
     width: 100%;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    @media (min-width: map-get($grid-breakpoints, 'md')) {
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-    @media (min-width: 992px) {
-      padding-right: 30px;
-      padding-left: 30px;
-    }
-    @media (min-width: 1200px) {
-      padding-right: 50px;
-      padding-left: 50px;
-    }
-    @media (min-width: 1400px) {
-      padding-right: 90px;
-      padding-left: 90px;
-      max-width: 1440px;
-    }
+    max-width: 1670px;
   }
 
   // Responsive containers that are 100% wide until a breakpoint

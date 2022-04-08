@@ -1,10 +1,6 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2,
-} from 'react-html-parser'
+import ReactHtmlParser from 'react-html-parser'
 
 const Footer = () => {
   const { wpgraphql } = useStaticQuery(graphql`
@@ -33,7 +29,7 @@ const Footer = () => {
     }
   `)
   return (
-    <footer style={{ backgroundColor: '#212529' }} className={`py-5`}>
+    <footer className={`py-5`}>
       <div className={`container-fluid`}>
         <div className={`row`}>
           <div className={`col-12 col-md-3`}>
