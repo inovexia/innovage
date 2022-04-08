@@ -33,7 +33,7 @@ const HomeBanner = ({ data }) => {
                   </div>
                 </div>
                 <div className={`col-12 col-md-4`}>
-                  <div classname={`ribbon-data`}>2</div>
+                  <div classname={`ribbon-data`}>3</div>
                 </div>
                 <div className={`col-12 col-md-4`}>
                   <div classname={`ribbon-data`}>3</div>
