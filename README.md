@@ -5,3 +5,4 @@
 <h1 align="center">
   Innovage Agency
 </h1>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ad8d8fea-382e-4b72-a3dd-53e84cb4f9f8/deploy-status)](https://app.netlify.com/sites/effervescent-gaufre-ee7b97/deploys)
