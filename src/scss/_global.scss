@@ -4,7 +4,14 @@
     width: 100%;
     overflow-x: hidden;
     color: #fff;
-    font-family: 'IR';
+    font-family: "IR";
+    .navbar-toggler {
+      border: none;
+      &:focus {
+        box-shadow: none;
+        border: none;
+      }
+    }
   }
   a {
     text-decoration: none;
@@ -12,34 +19,38 @@
   ul {
     list-style: none;
   }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0;
+  }
+
   .h1-text {
     font-size: 30px;
-    font-family: 'IL';
-    line-height: 100%;
+    font-family: "IL";
     margin: 0;
   }
   .h2-text {
     font-size: 36px;
-    font-family: 'IT';
-    line-height: 100%;
+    font-family: "IT";
     margin: 0;
   }
   .h3-text {
     font-size: 36px;
-    font-family: 'IT';
-    line-height: 100%;
+    font-family: "IT";
     margin: 0;
   }
   .h4-text {
     font-size: 30px;
-    font-family: 'ISB';
-    line-height: 100%;
+    font-family: "ISB";
     margin: 0;
   }
   .h5-text {
-    font-size: 26px;
-    font-family: 'ISB';
-    line-height: 100%;
+    font-size: 24px;
+    font-family: "ISB";
     margin: 0;
   }
   .inv-primary-btn {
@@ -56,6 +67,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    &:hover {
+      color: #fff;
+    }
+  }
+  .inv-secondary-btn {
+    width: 100%;
+    max-width: 220px;
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+    text-align: center;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      color: #000;
+    }
   }
 }
 @media (min-width: 576px) {

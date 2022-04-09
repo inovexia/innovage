@@ -5,10 +5,13 @@
       .navbar-nav {
         a {
           color: #fff;
-          font-size: 16px;
           text-transform: uppercase;
           text-decoration: none;
-          font-family: 'IM';
+          font-family: "IM";
+          width: 100%;
+          text-align: center;
+          font-size: 14px;
+          margin: 10px 0px;
         }
       }
     }
@@ -19,7 +22,10 @@
     .navbar {
       .navbar-nav {
         a {
-          margin-left: 30px;
+          width: auto;
+          text-align: unset;
+          font-size: 16px;
+          margin: 0px 0px 0px 30px;
         }
       }
     }

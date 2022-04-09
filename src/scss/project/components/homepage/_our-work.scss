@@ -1,0 +1,129 @@
+@media (min-width: 0) {
+    .our-work {
+        padding: 50px 0px;
+        .our-work-header {
+            padding-bottom: 40px;
+        }
+        .project-image {
+            position: relative;
+            a {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        .project-details {
+            position: relative;
+            height: 100%;
+            h5 {
+                line-height: 29px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 20px;
+                font-family: "IR";
+                padding-top: 8px;
+            }
+            span {
+                font-size: 16px;
+                line-height: 20px;
+                font-family: "IR";
+                margin-top: 30px;
+                display: block;
+            }
+        }
+        .left {
+            padding-right: 10px;
+        }
+        .right {
+            padding-left: 10px;
+        }
+        .our-work-btn {
+            a {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+    .our-work {
+        .our-work-header {
+            padding-bottom: 0px;
+        }
+        padding: 130px 0px;
+
+        .project-details {
+            span {
+                position: absolute;
+                bottom: 0px;
+            }
+        }
+        .content-right {
+            text-align: right;
+
+            span {
+                right: 0;
+            }
+        }
+
+        .left {
+            padding-right: 40px;
+        }
+        .right {
+            padding-left: 40px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .pos-value {
+            position: relative;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .pos-value-last {
+            padding-bottom: 100px;
+        }
+        .pos-last {
+            padding-bottom: 100px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                background-color: #fff;
+                border-radius: 100%;
+                bottom: 0;
+                left: -20px;
+            }
+        }
+        .pos-value::after {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 100%;
+            border-right: 1px solid #fff;
+            right: 0;
+            top: 0;
+            opacity: 0.5;
+        }
+        .pos-value::before {
+            position: absolute;
+            content: "";
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 100%;
+            right: -20px;
+            top: 40px;
+        }
+    }
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}

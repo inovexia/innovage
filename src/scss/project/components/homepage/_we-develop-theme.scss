@@ -1,0 +1,53 @@
+@media (min-width: 0) {
+    .we-develop {
+        padding: 110px 0px;
+        .we-develop-left {
+            h3 {
+                font-size: 33px;
+                font-family: "IT";
+                line-height: 50px;
+            }
+        }
+        .we-develop-right {
+            padding-top: 50px;
+            p {
+                font-size: 16px;
+                font-family: "IR";
+                margin-bottom: 30px;
+            }
+            a {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+    .we-develop {
+        padding: 110px 0px;
+        .we-develop-left {
+            padding-right: 65px;
+
+            h3 {
+                font-size: 65px;
+                line-height: 79px;
+            }
+        }
+        .we-develop-right {
+            padding-top: 108px;
+            p {
+                font-size: 18px;
+            }
+            a {
+                margin-top: 60px;
+            }
+        }
+    }
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}
