@@ -2,14 +2,7 @@ import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
 //import HeaderData from '../constants/header-data'
-import {
-  Navbar,
-  Container,
-  Nav,
-  Tab,
-  Modal,
-  NavDropdown,
-} from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 
 const Header = () => {
   const { wpgraphql } = useStaticQuery(graphql`

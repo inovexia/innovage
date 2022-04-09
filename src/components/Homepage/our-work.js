@@ -83,20 +83,20 @@ const OurWork = ({ data }) => {
           >
             <div className={`project-image`}>
               <img
-                src={project2Image.sourceUrl}
-                alt={project2Image.altText}
+                src={project3Image.sourceUrl}
+                alt={project3Image.altText}
                 className={`w-100`}
               />
-              <Link to={project2Link} className={`inv-secondary-btn`}>
+              <Link to={project3Link} className={`inv-secondary-btn`}>
                 Learn More
               </Link>
             </div>
           </div>
           <div className={`col-12 col-md-6 right mb-5 mb-md-0 pos-last`}>
             <div className={`project-details`}>
-              <h5 className={`h5-text`}>{project2Title}</h5>
-              {ReactHtmlParser(project2Description)}
-              <span>{project2Technology}</span>
+              <h5 className={`h5-text`}>{project3Title}</h5>
+              {ReactHtmlParser(project3Description)}
+              <span>{project3Technology}</span>
             </div>
           </div>
         </div>

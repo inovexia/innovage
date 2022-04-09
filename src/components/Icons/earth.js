@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Earth = props => {
-  const { height, width, className, style } = props
   return (
     <svg
       id="Layer_1"
