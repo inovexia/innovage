@@ -31,8 +31,8 @@ const OurWork = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className={`row`}>
-          <div className={`col-12 col-md-6 left mb-5 mb-md-0 pos-value`}>
+        <div className={`row our-work-row`}>
+          <div className={`col-12 col-md-6 left pos-value`}>
             <div className={`project-image`}>
               <img
                 src={project1Image.sourceUrl}
@@ -44,7 +44,7 @@ const OurWork = ({ data }) => {
               </Link>
             </div>
           </div>
-          <div className={`col-12 col-md-6 right mb-5 mb-md-0`}>
+          <div className={`col-12 col-md-6 right`}>
             <div className={`project-details`}>
               <h5 className={`h5-text`}>{project1Title}</h5>
               {ReactHtmlParser(project1Description)}
@@ -52,19 +52,15 @@ const OurWork = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className={`row`}>
-          <div
-            className={`col-12 col-md-6 left order-2 order-md-1 mb-5 mb-md-0 pos-value`}
-          >
+        <div className={`row our-work-row`}>
+          <div className={`col-12 col-md-6 left order-2 order-md-1 pos-value`}>
             <div className={`project-details content-right`}>
               <h5 className={`h5-text`}>{project2Title}</h5>
               {ReactHtmlParser(project2Description)}
               <span>{project2Technology}</span>
             </div>
           </div>
-          <div
-            className={`col-12 col-md-6 right order-1 order-md-2 mb-5 mb-md-0`}
-          >
+          <div className={`col-12 col-md-6 right order-1 order-md-2`}>
             <div className={`project-image`}>
               <img
                 src={project2Image.sourceUrl}
@@ -77,10 +73,8 @@ const OurWork = ({ data }) => {
             </div>
           </div>
         </div>
-        <div className={`row`}>
-          <div
-            className={`col-12 col-md-6 left mb-5 mb-md-0 pos-value pos-value-last`}
-          >
+        <div className={`row our-work-row`}>
+          <div className={`col-12 col-md-6 left pos-value pos-value-last`}>
             <div className={`project-image`}>
               <img
                 src={project3Image.sourceUrl}
@@ -92,7 +86,7 @@ const OurWork = ({ data }) => {
               </Link>
             </div>
           </div>
-          <div className={`col-12 col-md-6 right mb-5 mb-md-0 pos-last`}>
+          <div className={`col-12 col-md-6 right pos-last`}>
             <div className={`project-details`}>
               <h5 className={`h5-text`}>{project3Title}</h5>
               {ReactHtmlParser(project3Description)}

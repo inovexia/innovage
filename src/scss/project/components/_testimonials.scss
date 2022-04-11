@@ -1,0 +1,63 @@
+@media (min-width: 0) {
+    .testimonials {
+        padding: 0px 0px 120px;
+        .testimonial-slider {
+            width: 100%;
+            max-width: 620px;
+            margin: 0px auto;
+            text-align: center;
+            padding-top: 40px;
+
+            .swiper {
+                padding-bottom: 30px;
+
+                .swiper-pagination {
+                    position: absolute;
+                    left: 50%;
+                    right: 50%;
+                    bottom: 0px;
+                    transform: translate(-50%, 0%);
+                    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                        background: #c4c4c4;
+                        opacity: 1;
+                    }
+                    .swiper-pagination-bullet {
+                        background: #747474;
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            .client-profile-pic {
+                width: 70px;
+                height: 70px;
+                margin: 0px auto 40px;
+                border-radius: 100%;
+                overflow: hidden;
+            }
+            .client-desc {
+                p {
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: #fff;
+                    font-family: "IL";
+                    margin-bottom: 40px;
+                }
+            }
+            .client-name {
+                font-size: 18px;
+                font-family: "ISB";
+            }
+        }
+    }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}

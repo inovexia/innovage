@@ -6,6 +6,9 @@ import HomeBanner from '~/components/Homepage/banner'
 import WeDevelop from '~/components/Homepage/we-develop'
 import WhatWeDo from '~/components/Homepage/what-we-do'
 import OurWork from '~/components/Homepage/our-work'
+import BeautifullTemplates from '~/components/Homepage/beautifull-templates'
+import DevelopApp from '~/components/Homepage/develop-app'
+import Testimonials from '~/components/testimonials'
 
 const IndexPage = () => {
   const { wpgraphql } = useStaticQuery(
@@ -15,6 +18,7 @@ const IndexPage = () => {
             page(id: "cG9zdDo1", idType: ID) {
               pageId
               title(format: RENDERED)
+
               acfHomepage {
                 bannerText
                 bannerButtonLink
@@ -71,6 +75,27 @@ const IndexPage = () => {
                 project3Image {
                   sourceUrl(size: LARGE)
                 }
+
+                templateSectionTitle
+                keyFeatures {
+                  features
+                }
+                templateViewMoreButtonText
+                templateViewMoreLink
+                templateSectionImage {
+                  sourceUrl(size: LARGE)
+                }
+
+                developAppTitle
+                developApp {
+                  app
+                }
+                developButtonText
+                developButtonLink
+                appImage {
+                  altText
+                  sourceUrl(size: LARGE)
+                }
               }
             }
           }
@@ -89,6 +114,9 @@ const IndexPage = () => {
       <WeDevelop data={acfHomepage} />
       <WhatWeDo data={acfHomepage} />
       <OurWork data={acfHomepage} />
+      <BeautifullTemplates data={acfHomepage} />
+      <DevelopApp data={acfHomepage} />
+      <Testimonials />
     </>
   )
 }
