@@ -3,6 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 
 //import HeaderData from '../constants/header-data'
 import { Navbar, Nav } from 'react-bootstrap'
+import Hamburger from '../Icons/hamburger'
 
 const Header = () => {
   const { wpgraphql } = useStaticQuery(graphql`
@@ -37,7 +38,9 @@ const Header = () => {
             />
           </Link>
 
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Toggle aria-controls="responsive-navbar-nav">
+            <Hamburger />
+          </Navbar.Toggle>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="w-100 justify-content-md-end">
               {wpgraphql.themeOptions.acfHeader &&
