@@ -1,0 +1,178 @@
+@media (min-width: 0) {
+    .projects {
+        padding: 50px 0px 25px;
+        .entry-title {
+            padding-bottom: 20px;
+            h3 {
+                width: 100%;
+                max-width: 350px;
+                position: relative;
+                padding-left: 36px;
+                font-size: 40px;
+                line-height: 51px;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 30px;
+                    height: 1px;
+                    background-color: #fff;
+                    top: 22px;
+                    left: 0;
+                }
+            }
+        }
+
+        .project-list {
+            .row {
+                margin-bottom: 50px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .project-content {
+                height: 100%;
+                display: inline-grid;
+                .project-title {
+                    margin: 15px 0px 10px;
+                    p {
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        line-height: 21px;
+                        font-family: "ISB";
+
+                        span {
+                            color: #ff214f;
+                        }
+                    }
+                }
+                .project-desc {
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-family: "IR";
+
+                    ul {
+                        padding-left: 15px;
+                        list-style: disc;
+                        margin-top: 20px;
+                        margin-bottom: 0;
+
+                        li {
+                            padding-bottom: 10px;
+                            &:last-child {
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .entry-desc {
+        padding: 50px 0px 0px;
+        p {
+            width: 100%;
+            max-width: 900px;
+            margin: 0px auto;
+            text-align: center;
+            font-size: 18px;
+            line-height: 21px;
+            font-family: "IL";
+        }
+    }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+    .projects {
+        padding: 100px 0px 50px;
+
+        .entry-title {
+            padding-bottom: 40px;
+            h3 {
+                max-width: 410px;
+                padding-left: 70px;
+                font-size: 44px;
+                line-height: 55px;
+
+                &::before {
+                    width: 50px;
+                    top: 25px;
+                }
+            }
+        }
+        .project-list {
+            .row:nth-child(2n + 1) {
+                .project-last {
+                    order: -1 !important;
+                }
+            }
+            .project-content {
+                .project-title {
+                    margin: 0px 0px 20px;
+                    p {
+                        font-size: 24px;
+                        line-height: 29px;
+                    }
+                }
+                .project-desc {
+                    font-size: 18px;
+                    line-height: 22px;
+                    ul {
+                        li {
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    .projects {
+        .entry-title {
+            h3 {
+                max-width: 600px;
+                padding-left: 116px;
+                font-size: 48px;
+                line-height: 59px;
+                &::before {
+                    width: 76px;
+                    top: 30px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .projects {
+        .entry-title {
+            h3 {
+                &::before {
+                    top: 28px;
+                }
+            }
+        }
+        .project-list {
+            .row:nth-child(2n + 1) {
+                .project-last {
+                    padding-right: 20px;
+                }
+            }
+            .row:nth-child(2n + 2) .project-first {
+                padding-right: 20px;
+            }
+            .row:nth-child(2n + 1) {
+                .project-first {
+                    padding-left: 20px;
+                }
+            }
+            .row:nth-child(2n + 2) .project-last {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+@media (min-width: 1400px) {
+}

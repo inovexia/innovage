@@ -3,42 +3,31 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import Seo from '../components/seo'
 import WorkBanner from '~/components/Our-Work/banner'
-import Services from '~/components/Services/our-services'
-import OurProcess from '~/components/Services/our-process'
+import OurProjects from '~/components/Our-Work/our-projects'
 
 const OurServices = () => {
   const { wpgraphql } = useStaticQuery(
       graphql`
         query {
           wpgraphql {
-            page(id: "cG9zdDo2Mg==", idType: ID) {
+            page(id: "cG9zdDo2NQ==", idType: ID) {
               pageId
               title(format: RENDERED)
-
-              acfServices {
+              acfOurWork {
                 bannerDescription
                 bannerImage {
                   altText
                   sourceUrl(size: LARGE)
                 }
-
-                serviceEntryTitle
-                services {
-                  serviceDescription
-                  serviceTitle
-                  serviceImage {
+                projectEntryTitle
+                projects {
+                  projectName
+                  projectDescription
+                  projectLink
+                  buttonText
+                  projectImage {
                     altText
                     sourceUrl(size: LARGE)
-                  }
-                }
-
-                processEntryTitle
-                ourProcess {
-                  title
-                  description
-                  processImage {
-                    sourceUrl(size: LARGE)
-                    altText
                   }
                 }
               }
@@ -47,7 +36,7 @@ const OurServices = () => {
         }
       `
     ),
-    { title, acfServices } = wpgraphql.page
+    { title, acfOurWork } = wpgraphql.page
 
   return (
     <>
@@ -55,9 +44,8 @@ const OurServices = () => {
         title={title}
         description={`We develop fast headless websites and Apps`}
       />
-      <WorkBanner data={acfServices} title={title} />
-      <Services data={acfServices} />
-      <OurProcess data={acfServices} />
+      <WorkBanner data={acfOurWork} title={title} />
+      <OurProjects data={acfOurWork} />
     </>
   )
 }
