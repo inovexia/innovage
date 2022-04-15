@@ -1,16 +1,227 @@
 @media (min-width: 0) {
-  
+    .about-us {
+        padding: 50px 0px 25px;
+        .entry-title {
+            padding-bottom: 20px;
+            h3 {
+                width: 100%;
+                max-width: 350px;
+                position: relative;
+                padding-left: 36px;
+                font-size: 40px;
+                line-height: 51px;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 30px;
+                    height: 1px;
+                    background-color: #fff;
+                    top: 22px;
+                    left: 0;
+                }
+            }
+        }
+
+        .about-list {
+            .about-us-list {
+                .row {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    &.double-column {
+                        background-color: #000;
+                        margin-bottom: 50px;
+                        padding-top: 40px;
+                        padding-bottom: 40px;
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            width: 100%;
+                            left: -100%;
+                            height: 100%;
+                            background-color: #000;
+                            top: 0;
+                        }
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            width: 100%;
+                            right: -100%;
+                            height: 100%;
+                            background-color: #000;
+                            top: 0;
+                        }
+                    }
+                }
+            }
+            .about-content {
+                height: 100%;
+                display: inline-grid;
+                .about-title {
+                    margin: 15px 0px 10px;
+                    p {
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        line-height: 21px;
+                        font-family: "ISB";
+
+                        span {
+                            color: #ff214f;
+                        }
+                    }
+                }
+                .about-desc {
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-family: "IR";
+
+                    ul {
+                        padding-left: 15px;
+                        list-style: disc;
+                        margin-top: 20px;
+                        margin-bottom: 0;
+
+                        li {
+                            padding-bottom: 10px;
+                            &:last-child {
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .entry-desc {
+        padding: 50px 0px 0px;
+        p {
+            width: 100%;
+            max-width: 900px;
+            margin: 0px auto;
+            text-align: center;
+            font-size: 18px;
+            line-height: 21px;
+            font-family: "IL";
+        }
+    }
 }
 @media (min-width: 576px) {
 }
 @media (min-width: 768px) {
-   
+    .about-us {
+        padding: 100px 0px 50px;
+
+        .entry-title {
+            padding-bottom: 80px;
+            h3 {
+                max-width: 410px;
+                padding-left: 70px;
+                font-size: 44px;
+                line-height: 55px;
+
+                &::before {
+                    width: 50px;
+                    top: 25px;
+                }
+            }
+        }
+        .about-list {
+            .about-us-list {
+                .row {
+                    &.double-column {
+                        .about-image {
+                            width: 100%;
+                            max-width: 423px;
+                            margin: 0px auto;
+                            img {
+                                margin-top: -80px;
+                            }
+                        }
+                    }
+                }
+            }
+            .about-us-list:nth-child(2n + 1) {
+                .about-last {
+                    order: -1 !important;
+                }
+            }
+
+            .about-content {
+                .about-title {
+                    margin: 0px 0px 20px;
+                    p {
+                        font-size: 24px;
+                        line-height: 29px;
+                    }
+                }
+                .about-desc {
+                    font-size: 18px;
+                    line-height: 22px;
+                    ul {
+                        li {
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 @media (min-width: 992px) {
-   
+    .about-us {
+        .entry-title {
+            h3 {
+                max-width: 600px;
+                padding-left: 116px;
+                font-size: 48px;
+                line-height: 59px;
+                &::before {
+                    width: 76px;
+                    top: 30px;
+                }
+            }
+        }
+    }
 }
 @media (min-width: 1200px) {
-   
+    .about-us {
+        .entry-title {
+            h3 {
+                &::before {
+                    top: 28px;
+                }
+            }
+        }
+        .about-list {
+            .about-us-list {
+                .row {
+                    &.double-column {
+                        margin-bottom: 96px;
+                    }
+                }
+            }
+            .about-us-list:nth-child(2n + 1) {
+                .about-last {
+                    padding-right: 20px;
+                }
+            }
+
+            .about-us-list:nth-child(2n + 2) .about-first {
+                padding-right: 20px;
+            }
+            .about-us-list:nth-child(2n + 1) {
+                .about-first {
+                    padding-left: 20px;
+                }
+            }
+            .about-us-list:nth-child(2n + 2) .about-last {
+                padding-left: 20px;
+            }
+        }
+    }
 }
 @media (min-width: 1400px) {
 }

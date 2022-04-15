@@ -1,0 +1,106 @@
+@media (min-width: 0) {
+    .contact-form-section {
+        padding: 50px 0px;
+
+        .form-header {
+            width: 100%;
+            max-width: 346px;
+
+            h2 {
+                font-size: 48px;
+                line-height: 58px;
+                font-family: "ISB";
+                text-transform: uppercase;
+            }
+        }
+        .contact-details {
+            ul {
+                padding: 0;
+                list-style: none;
+                margin-bottom: 40px;
+
+                li {
+                    font-size: 18px;
+                    line-height: 21px;
+                    font-family: "IR";
+                    color: #fff;
+                    margin-top: 16px;
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+        #contact-form {
+            margin-top: 40px;
+
+            input {
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid #fff;
+                color: #fff;
+                font-size: 16px;
+                line-height: 19px;
+                font-family: "IR";
+                padding: 8px 0px;
+                margin-bottom: 40px;
+
+                ::placeholder {
+                    color: #fff;
+                }
+            }
+            input:focus {
+                outline: none;
+                box-shadow: none;
+            }
+            textarea {
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid #fff;
+                color: #fff;
+                font-size: 16px;
+                line-height: 19px;
+                font-family: "IR";
+                padding: 8px 0px;
+
+                ::placeholder {
+                    color: #fff;
+                }
+            }
+            textarea:focus {
+                outline: none;
+                box-shadow: none;
+            }
+            .response {
+                div {
+                    background-color: transparent;
+                    border: none;
+                    margin-top: 50px;
+                    color: #fff;
+                    padding: 0;
+                }
+            }
+            #contact-us-button {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+    .contact-form-section {
+        padding: 96px 0px;
+    }
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}
+@media (min-width: 1640px) {
+}

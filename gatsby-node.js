@@ -1,4 +1,4 @@
-const { createRemoteFileNode } = require("gatsby-source-filesystem")
+const { createRemoteFileNode } = require('gatsby-source-filesystem')
 const path = require(`path`)
 
 exports.createResolvers = ({
@@ -51,17 +51,17 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    result.data.wpgraphql.pages.nodes.forEach(({ slug, uri, pageId }) => {
-      if (slug !== "home") {
-        createPage({
-          path: `${uri}`,
-          component: path.resolve(`./src/templates/pages/index.js`),
-          context: {
-            pageId: pageId,
-          }
-        })
-      }
-    })
+    // result.data.wpgraphql.pages.nodes.forEach(({ slug, uri, pageId }) => {
+    //   if (slug !== "home") {
+    //     createPage({
+    //       path: `${uri}`,
+    //       component: path.resolve(`./src/templates/pages/index.js`),
+    //       context: {
+    //         pageId: pageId,
+    //       }
+    //     })
+    //   }
+    // })
     result.data.wpgraphql.posts.nodes.forEach(({ uri, postId }) => {
       createPage({
         path: `/blogs${uri}`,

@@ -26,7 +26,7 @@ const Header = () => {
   `)
 
   return (
-    <header className={`pt-4`}>
+    <header>
       <Navbar collapseOnSelect expand="lg" variant="dark">
         <div className={`container-fluid`}>
           <Link to={'/'} className={`logo`}>

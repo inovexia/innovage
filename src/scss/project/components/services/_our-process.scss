@@ -112,7 +112,7 @@
                     &::after {
                         position: absolute;
                         content: "";
-                        top: 0;
+                        top: 14px;
                         left: 8px;
                         width: 40px;
                         height: 40px;
@@ -155,6 +155,9 @@
                     .pos-rel {
                         &::before {
                             display: none;
+                        }
+                        &::after {
+                            top: 0px;
                         }
                     }
                 }
