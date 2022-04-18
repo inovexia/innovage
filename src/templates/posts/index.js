@@ -26,7 +26,7 @@ const Post = ({ data }) => {
         style={{
           backgroundImage:
             featuredImage !== null
-              ? `url(${featuredImage.node.imageFile.childImageSharp.original.src})`
+              ? `url(${featuredImage.node.sourceUrl})`
               : `none`,
         }}
       >
@@ -71,17 +71,7 @@ export const query = graphql`
         content(format: RENDERED)
         featuredImage {
           node {
-            altText
-            sourceUrl
-            imageFile {
-              childImageSharp {
-                original {
-                  height
-                  src
-                  width
-                }
-              }
-            }
+            sourceUrl(size: LARGE)
           }
         }
       }
