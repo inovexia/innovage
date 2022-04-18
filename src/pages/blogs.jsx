@@ -37,16 +37,12 @@ const BlogsPage = () => {
               featuredImage {
                 node {
                   altText
-                  sourceUrl
                   imageFile {
                     childImageSharp {
-                      original {
-                        height
-                        src
-                        width
-                      }
+                      gatsbyImageData
                     }
                   }
+                  sourceUrl(size: LARGE)
                 }
               }
             }
@@ -85,7 +81,7 @@ const BlogsPage = () => {
                             <LazyLoadImage
                               src={
                                 featuredImage.node.imageFile.childImageSharp
-                                  .original.src
+                                  .gatsbyImageData.images.fallback.src
                               }
                               alt={featuredImage.node.altText}
                               className="mb-0 w-100"
