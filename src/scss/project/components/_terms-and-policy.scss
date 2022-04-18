@@ -1,0 +1,83 @@
+@media (min-width: 0) {
+    .additional-pages {
+        padding: 81px 0px;
+        .terms-policy {
+            a {
+                color: #ff214f;
+                text-decoration: underline;
+            }
+            h1 {
+                font-size: 34px;
+                font-family: "IL";
+                margin-bottom: 25px;
+                text-transform: uppercase;
+                position: relative;
+                padding-left: 50px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 30px;
+                    border-bottom: 1px solid #fff;
+                    top: 50%;
+                }
+            }
+            h2 {
+                font-size: 27px;
+                margin: 25px 0px 10px;
+                font-family: "IL";
+                text-transform: uppercase;
+            }
+            p {
+                font-size: 16px;
+                line-height: 18px;
+                font-family: "IR";
+                color: #fff;
+                text-align: justify;
+            }
+            ul {
+                padding: 10px 0px 10px 15px;
+                list-style: disc;
+            }
+        }
+    }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+    .additional-pages {
+        padding: 81px 0px;
+        .terms-policy {
+            h1 {
+                font-size: 65px;
+                padding-left: 116px;
+                &::before {
+                    left: 0;
+                    width: 76px;
+                }
+            }
+            h2 {
+                font-size: 48px;
+                margin: 25px 0px 10px;
+                font-family: "IL";
+            }
+            p {
+                font-size: 18px;
+                line-height: 21px;
+                font-family: "IR";
+                color: #fff;
+                text-align: left;
+            }
+            ul {
+                padding: 10px 0px 10px 15px;
+                list-style: disc;
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}

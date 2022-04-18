@@ -1,0 +1,47 @@
+@media (min-width: 0) {
+    .blog-content {
+        padding: 50px 0px;
+
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 18px;
+            font-family: "IR";
+
+            img {
+                margin-bottom: 15px;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+    .blog-content {
+        padding: 75px 0px;
+        p {
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    .blog-content {
+        padding: 100px 0px;
+
+        p {
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}
+@media (min-width: 1640px) {
+}
