@@ -24,6 +24,13 @@ const AboutUsPage = () => {
                   aboutTitle
                   aboutDescription
                   aboutImage {
+                    imageFile {
+                      childImageSharp {
+                        original {
+                          src
+                        }
+                      }
+                    }
                     altText
                     sourceUrl(size: LARGE)
                   }

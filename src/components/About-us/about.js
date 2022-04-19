@@ -21,7 +21,9 @@ const AboutUs = ({ data }) => {
                       <div className={`col-12 col-md-6 about-first`}>
                         <div className={`about-image`}>
                           <img
-                            src={aboutImage.sourceUrl}
+                            src={
+                              aboutImage.imageFile.childImageSharp.original.src
+                            }
                             alt={aboutImage.altText}
                             className={`w-100`}
                             loading="lazy"
