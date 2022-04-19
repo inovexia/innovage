@@ -27,6 +27,7 @@ const AboutUs = ({ data }) => {
                             alt={aboutImage.altText}
                             className={`w-100`}
                             loading="lazy"
+                            format="webp"
                           />
                         </div>
                       </div>

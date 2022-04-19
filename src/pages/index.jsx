@@ -58,6 +58,14 @@ const IndexPage = () => {
                 project1Technology
                 project1Description
                 project1Image {
+                  altText
+                  imageFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
                   sourceUrl(size: LARGE)
                 }
 
@@ -66,6 +74,14 @@ const IndexPage = () => {
                 project2Technology
                 project2Description
                 project2Image {
+                  altText
+                  imageFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
                   sourceUrl(size: LARGE)
                 }
 
@@ -74,6 +90,14 @@ const IndexPage = () => {
                 project3Technology
                 project3Description
                 project3Image {
+                  altText
+                  imageFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
                   sourceUrl(size: LARGE)
                 }
 
@@ -84,6 +108,14 @@ const IndexPage = () => {
                 templateViewMoreButtonText
                 templateViewMoreLink
                 templateSectionImage {
+                  altText
+                  imageFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
                   sourceUrl(size: LARGE)
                 }
 
@@ -94,6 +126,13 @@ const IndexPage = () => {
                 developButtonText
                 developButtonLink
                 appImage {
+                  imageFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
                   altText
                   sourceUrl(size: LARGE)
                 }

@@ -17,8 +17,15 @@ const AboutUsPage = () => {
               acfAbout {
                 bannerDescription
                 bannerImage {
-                  altText
+                  imageFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
                   sourceUrl(size: LARGE)
+                  altText
                 }
                 aboutDetails {
                   aboutTitle

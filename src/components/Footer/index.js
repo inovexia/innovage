@@ -13,7 +13,14 @@ const Footer = () => {
             copyrightText
             footerLogo {
               altText
-              sourceUrl
+              sourceUrl(size: LARGE)
+              imageFile {
+                childImageSharp {
+                  original {
+                    src
+                  }
+                }
+              }
             }
             footerMenu {
               footerMenuLabel

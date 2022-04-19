@@ -36,7 +36,7 @@ const OurWork = ({ data }) => {
             <div className={`project-image`}>
               <img
                 loading="lazy"
-                src={project1Image.sourceUrl}
+                src={project1Image.imageFile.childImageSharp.original.src}
                 alt={project1Image.altText}
                 className={`w-100`}
               />
@@ -65,7 +65,7 @@ const OurWork = ({ data }) => {
             <div className={`project-image`}>
               <img
                 loading="lazy"
-                src={project2Image.sourceUrl}
+                src={project2Image.imageFile.childImageSharp.original.src}
                 alt={project2Image.altText}
                 className={`w-100`}
               />
@@ -80,7 +80,7 @@ const OurWork = ({ data }) => {
             <div className={`project-image`}>
               <img
                 loading="lazy"
-                src={project3Image.sourceUrl}
+                src={project3Image.imageFile.childImageSharp.original.src}
                 alt={project3Image.altText}
                 className={`w-100`}
               />
