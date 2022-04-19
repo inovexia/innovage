@@ -24,6 +24,7 @@ const AboutUs = ({ data }) => {
                             src={aboutImage.sourceUrl}
                             alt={aboutImage.altText}
                             className={`w-100`}
+                            loading="lazy"
                           />
                         </div>
                       </div>

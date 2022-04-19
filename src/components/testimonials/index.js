@@ -57,6 +57,7 @@ const Testimonials = () => {
                         <SwiperSlide key={index}>
                           <div className={`client-profile-pic`}>
                             <img
+                              loading="lazy"
                               src={clientImage.sourceUrl}
                               alt={clientImage.altText}
                             />

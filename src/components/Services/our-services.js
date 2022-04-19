@@ -21,6 +21,7 @@ const Services = ({ data }) => {
                     <div className={`col-12 col-md-6 service-first`}>
                       <div className={`service-image`}>
                         <img
+                          loading="lazy"
                           src={serviceImage.sourceUrl}
                           alt={serviceImage.altText}
                           className={`w-100`}

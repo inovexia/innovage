@@ -34,6 +34,7 @@ const BeautifullTemplates = ({ data }) => {
           <div className={`col-12 col-md-6 order-1 order-md-2 `}>
             <div className={`template-right`}>
               <img
+                loading="lazy"
                 src={templateSectionImage.sourceUrl}
                 alt={templateSectionImage.altText}
                 className={`w-100`}

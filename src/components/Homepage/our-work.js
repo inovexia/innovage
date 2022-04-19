@@ -35,6 +35,7 @@ const OurWork = ({ data }) => {
           <div className={`col-12 col-md-6 left pos-value`}>
             <div className={`project-image`}>
               <img
+                loading="lazy"
                 src={project1Image.sourceUrl}
                 alt={project1Image.altText}
                 className={`w-100`}
@@ -63,6 +64,7 @@ const OurWork = ({ data }) => {
           <div className={`col-12 col-md-6 right order-1 order-md-2`}>
             <div className={`project-image`}>
               <img
+                loading="lazy"
                 src={project2Image.sourceUrl}
                 alt={project2Image.altText}
                 className={`w-100`}
@@ -77,6 +79,7 @@ const OurWork = ({ data }) => {
           <div className={`col-12 col-md-6 left pos-value pos-value-last`}>
             <div className={`project-image`}>
               <img
+                loading="lazy"
                 src={project3Image.sourceUrl}
                 alt={project3Image.altText}
                 className={`w-100`}

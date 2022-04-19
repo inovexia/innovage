@@ -23,6 +23,7 @@ const WhatWeDo = ({ data }) => {
                   <div className={`card-box text-center text-lg-start`}>
                     <div className={`icon`}>
                       <img
+                        loading="lazy"
                         src={iconImage.sourceUrl}
                         alt={iconImage.altText}
                         width="40px"

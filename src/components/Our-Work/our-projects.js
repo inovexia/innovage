@@ -30,6 +30,7 @@ const OurProjects = ({ data }) => {
                     <div className={`col-12 col-md-6 project-first`}>
                       <div className={`project-image`}>
                         <img
+                          loading="lazy"
                           src={projectImage.sourceUrl}
                           alt={projectImage.altText}
                           className={`w-100`}

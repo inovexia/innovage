@@ -16,6 +16,7 @@ const DevelopApp = ({ data }) => {
           <div className={`col-12 col-md-6 `}>
             <div className={`template-right`}>
               <img
+                loading="lazy"
                 src={appImage.sourceUrl}
                 alt={appImage.altText}
                 className={`w-100`}
