@@ -9,6 +9,7 @@ import OurWork from '~/components/Homepage/our-work'
 import BeautifullTemplates from '~/components/Homepage/beautifull-templates'
 import DevelopApp from '~/components/Homepage/develop-app'
 import Testimonials from '~/components/testimonials'
+import CTASection from '~/components/CTA'
 
 const IndexPage = () => {
   const { wpgraphql } = useStaticQuery(
@@ -117,6 +118,7 @@ const IndexPage = () => {
       <BeautifullTemplates data={acfHomepage} />
       <DevelopApp data={acfHomepage} />
       <Testimonials />
+      <CTASection />
     </>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import ReactHtmlParser from 'react-html-parser'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import CTASection from '~/components/CTA'
 
 import Seo from '../components/seo'
 import BlogData from '../components/Blogs/blog-banner'
@@ -109,6 +110,7 @@ const BlogsPage = () => {
           </div>
         </div>
       </section>
+      <CTASection />
     </>
   )
 }

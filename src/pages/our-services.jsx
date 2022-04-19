@@ -5,6 +5,7 @@ import Seo from '../components/seo'
 import ServiceBanner from '~/components/Services/banner'
 import Services from '~/components/Services/our-services'
 import OurProcess from '~/components/Services/our-process'
+import CTASection from '~/components/CTA'
 
 const OurServices = () => {
   const { wpgraphql } = useStaticQuery(
@@ -58,6 +59,7 @@ const OurServices = () => {
       <ServiceBanner data={acfServices} title={title} />
       <Services data={acfServices} />
       <OurProcess data={acfServices} />
+      <CTASection />
     </>
   )
 }

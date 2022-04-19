@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Seo from '../components/seo'
 import WorkBanner from '~/components/Our-Work/banner'
 import OurProjects from '~/components/Our-Work/our-projects'
+import CTASection from '~/components/CTA'
 
 const OurServices = () => {
   const { wpgraphql } = useStaticQuery(
@@ -46,6 +47,7 @@ const OurServices = () => {
       />
       <WorkBanner data={acfOurWork} title={title} />
       <OurProjects data={acfOurWork} />
+      <CTASection />
     </>
   )
 }
