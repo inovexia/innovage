@@ -119,13 +119,6 @@ const IndexPage = () => {
                 developButtonText
                 developButtonLink
                 appImage {
-                  imageFile {
-                    childImageSharp {
-                      original {
-                        src
-                      }
-                    }
-                  }
                   altText
                   sourceUrl(size: LARGE)
                 }

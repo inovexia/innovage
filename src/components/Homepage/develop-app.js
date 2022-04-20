@@ -17,7 +17,7 @@ const DevelopApp = ({ data }) => {
             <div className={`template-right`}>
               <img
                 loading="lazy"
-                src={appImage.imageFile.childImageSharp.original.src}
+                src={appImage.sourceUrl}
                 alt={appImage.altText}
                 className={`w-100`}
               />
