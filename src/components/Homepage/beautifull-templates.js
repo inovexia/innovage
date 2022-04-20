@@ -35,9 +35,7 @@ const BeautifullTemplates = ({ data }) => {
             <div className={`template-right`}>
               <img
                 loading="lazy"
-                src={
-                  templateSectionImage.imageFile.childImageSharp.original.src
-                }
+                src={templateSectionImage.sourceUrl}
                 alt={templateSectionImage.altText}
                 className={`w-100`}
               />

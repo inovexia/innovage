@@ -109,13 +109,6 @@ const IndexPage = () => {
                 templateViewMoreLink
                 templateSectionImage {
                   altText
-                  imageFile {
-                    childImageSharp {
-                      original {
-                        src
-                      }
-                    }
-                  }
                   sourceUrl(size: LARGE)
                 }
 
