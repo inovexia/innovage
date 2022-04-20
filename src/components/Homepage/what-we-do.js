@@ -24,7 +24,7 @@ const WhatWeDo = ({ data }) => {
                     <div className={`icon`}>
                       <img
                         loading="lazy"
-                        src={iconImage.imageFile.childImageSharp.original.src}
+                        src={iconImage.sourceUrl}
                         alt={iconImage.altText}
                         width="40px"
                         height="auto"
