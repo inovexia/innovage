@@ -19,7 +19,14 @@ const ContactUs = () => {
                 bannerDescription
                 bannerImage {
                   altText
-                  sourceUrl(size: LARGE)
+                  sourceUrl(size: MEDIUM)
+                  imageFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
                 }
                 contactDetails
                 contactFormTitle

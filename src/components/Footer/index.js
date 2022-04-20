@@ -45,7 +45,10 @@ const Footer = () => {
                 <Link to={'/'} className={`logo`}>
                   <img
                     loading={'lazy'}
-                    src={wpgraphql.themeOptions.acfFooter.footerLogo.sourceUrl}
+                    src={
+                      wpgraphql.themeOptions.acfFooter.footerLogo.imageFile
+                        .childImageSharp.original.src
+                    }
                     alt={wpgraphql.themeOptions.acfFooter.footerLogo.altText}
                     className={`mb-0`}
                   />

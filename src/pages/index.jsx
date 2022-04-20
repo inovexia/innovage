@@ -49,6 +49,13 @@ const IndexPage = () => {
                   iconImage {
                     altText
                     sourceUrl(size: LARGE)
+                    imageFile {
+                      childImageSharp {
+                        original {
+                          src
+                        }
+                      }
+                    }
                   }
                 }
                 ourWorkTitle

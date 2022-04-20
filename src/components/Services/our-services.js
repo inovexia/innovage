@@ -22,7 +22,9 @@ const Services = ({ data }) => {
                       <div className={`service-image`}>
                         <img
                           loading="lazy"
-                          src={serviceImage.sourceUrl}
+                          src={
+                            serviceImage.imageFile.childImageSharp.original.src
+                          }
                           alt={serviceImage.altText}
                           className={`w-100`}
                         />

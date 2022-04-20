@@ -26,9 +26,10 @@ const OurProcess = ({ data }) => {
                     className={`col-12 col-md-6 order-1 order-md-2 pos-unset`}
                   >
                     <img
-                      src={processImage.sourceUrl}
+                      src={processImage.imageFile.childImageSharp.original.src}
                       alt={processImage.alttext}
                       className={`w-100`}
+                      loading="lazy"
                     />
                   </div>
                 </div>

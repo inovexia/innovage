@@ -31,7 +31,9 @@ const OurProjects = ({ data }) => {
                       <div className={`project-image`}>
                         <img
                           loading="lazy"
-                          src={projectImage.sourceUrl}
+                          src={
+                            projectImage.imageFile.childImageSharp.original.src
+                          }
                           alt={projectImage.altText}
                           className={`w-100`}
                         />

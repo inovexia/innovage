@@ -37,7 +37,15 @@ const BlogsPage = () => {
               excerpt(format: RENDERED)
               featuredImage {
                 node {
+                  imageFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
                   sourceUrl(size: LARGE)
+                  altText
                 }
               }
             }
@@ -68,7 +76,6 @@ const BlogsPage = () => {
                   { author, date, excerpt, featuredImage, title, slug },
                   index
                 ) => {
-                  console.log(featuredImage)
                   return (
                     <div key={index} className="col-12 col-md-4 col-lg-3 mb-4">
                       <div className="blog-post blog-post-style1 text-center text-md-left h-100">
@@ -76,7 +83,10 @@ const BlogsPage = () => {
                           <div className="blog-post-images">
                             <Link to={`/blogs/${slug}/`}>
                               <LazyLoadImage
-                                src={featuredImage.node.sourceUrl}
+                                src={
+                                  featuredImage.node.imageFile.childImageSharp
+                                    .original.src
+                                }
                                 alt={featuredImage.node.altText}
                                 className="mb-0 w-100"
                               />

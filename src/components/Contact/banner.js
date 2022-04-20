@@ -7,7 +7,9 @@ const ContactBanner = ({ data, title }) => {
     <>
       <section
         className={`banner d-flex justify-content-center align-items-center`}
-        style={{ backgroundImage: `url(${bannerImage.sourceUrl})` }}
+        style={{
+          backgroundImage: `url(${bannerImage.imageFile.childImageSharp.original.src})`,
+        }}
       >
         <div className={`container-fluid`}>
           <div className={`row`}>

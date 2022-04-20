@@ -18,7 +18,14 @@ const Testimonials = () => {
               clientName
               clientImage {
                 altText
-                sourceUrl(size: LARGE)
+                sourceUrl(size: MEDIUM)
+                imageFile {
+                  childImageSharp {
+                    original {
+                      src
+                    }
+                  }
+                }
               }
             }
           }
@@ -58,7 +65,10 @@ const Testimonials = () => {
                           <div className={`client-profile-pic`}>
                             <img
                               loading="lazy"
-                              src={clientImage.sourceUrl}
+                              src={
+                                clientImage.imageFile.childImageSharp.original
+                                  .src
+                              }
                               alt={clientImage.altText}
                             />
                           </div>

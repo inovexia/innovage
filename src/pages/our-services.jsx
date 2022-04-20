@@ -20,7 +20,14 @@ const OurServices = () => {
                 bannerDescription
                 bannerImage {
                   altText
-                  sourceUrl(size: LARGE)
+                  sourceUrl(size: MEDIUM)
+                  imageFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
                 }
 
                 serviceEntryTitle
@@ -29,7 +36,14 @@ const OurServices = () => {
                   serviceTitle
                   serviceImage {
                     altText
-                    sourceUrl(size: LARGE)
+                    sourceUrl(size: MEDIUM)
+                    imageFile {
+                      childImageSharp {
+                        original {
+                          src
+                        }
+                      }
+                    }
                   }
                 }
 
@@ -38,8 +52,15 @@ const OurServices = () => {
                   title
                   description
                   processImage {
-                    sourceUrl(size: LARGE)
                     altText
+                    sourceUrl(size: MEDIUM)
+                    imageFile {
+                      childImageSharp {
+                        original {
+                          src
+                        }
+                      }
+                    }
                   }
                 }
               }

@@ -18,7 +18,14 @@ const OurServices = () => {
                 bannerDescription
                 bannerImage {
                   altText
-                  sourceUrl(size: LARGE)
+                  sourceUrl(size: MEDIUM)
+                  imageFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
                 }
                 projectEntryTitle
                 projects {
@@ -28,7 +35,14 @@ const OurServices = () => {
                   buttonText
                   projectImage {
                     altText
-                    sourceUrl(size: LARGE)
+                    sourceUrl(size: MEDIUM)
+                    imageFile {
+                      childImageSharp {
+                        original {
+                          src
+                        }
+                      }
+                    }
                   }
                 }
               }
